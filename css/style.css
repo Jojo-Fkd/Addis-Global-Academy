@@ -1,0 +1,268 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'roboto',sans-serif;
+    overflow-x: hidden;
+}
+:root{
+    --BG-COLOR:#000000;
+    --MAIN-COLOR:#ffffff;
+    --SIDE-COLOR:#f5f5f5ef;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+button{
+    cursor: pointer;
+    padding:10px;
+    border-radius: 12px;
+}
+.title-background{
+    width: 96%;
+    height: 80px;
+    text-align: center;
+    background: var(--BG-COLOR);
+    color: var(--MAIN-COLOR);
+    margin:2rem 0 0 2rem;
+    padding-top: 12px;
+}
+.title-background h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+/*MAINCODE*/
+.page1{
+    height:100vh;
+}
+header{
+    width: 100%;
+    height: 18vh;
+    background: var(--BG-COLOR);
+    color: var(--MAIN-COLOR);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+}
+header nav{
+    display: flex;
+    margin: 3.3rem;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li a{
+    color: var(--MAIN-COLOR);
+    font-size: 1.8rem;
+    margin-right: 5rem;
+}
+header nav li a::before{
+    content: "";
+    background: var(--MAIN-COLOR);
+    position: absolute;
+    top: 60%;
+    width:0;
+    height: 3px;
+    transition: all ease-in-out 1s;
+}
+header nav li a:hover::before{
+    width: 6.5%;
+}
+header nav a button {
+    width: 10rem;
+    background: var(--MAIN-COLOR);
+    border: 1px solid;
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 10px;
+    cursor: pointer;
+    transition: all ease-in-out 1s;
+}
+
+header nav a button:hover{
+    background: var(--BG-COLOR);
+    color: var(--MAIN-COLOR);
+    border: 1px solid white;
+}
+.page1 main{
+    position: relative;
+    top: 18vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(main1.png);
+    width: 100%;
+    height: 82vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.page1 main h1{
+    color: var(--MAIN-COLOR);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.img-no-teller{
+    position: absolute;
+    left: 42%;
+    bottom: 5%;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+}
+#int1,#int2,#int3,#int4{
+    background: var(--SIDE-COLOR);
+    width: 2vw;
+    height: 4vh;
+    border-radius: 5vh;
+    margin: 1.5rem;
+    margin-right: 0.2rem;
+}
+#int1{
+    background: #666;
+}
+.page2 main{
+    display: flex;
+    justify-content: center;
+}
+.socials-website{
+    width: 30%;
+    height: 25vh;
+    border: 1px solid;
+    margin-top: 4rem;
+    text-align: center;
+}
+.socials-website h2{
+    position: relative;
+    bottom: 15%;
+    background:var(--MAIN-COLOR);
+    width: 130px;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.socials-website h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.counters{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    text-align: center;
+}
+.counters h1,.counters span{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.page3 figure{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imgs .layer{
+    width: 28rem;
+    height: 35rem;
+    background: black;
+    margin: 1.5rem;
+    text-align: center;
+}
+.layer img{
+    width: 28rem;
+    height: 35rem;
+    cursor: pointer;
+}
+.imgs .layer h1{
+    font-size: 2.5rem;
+    position: relative;
+    bottom: 10%;
+    color: var(--MAIN-COLOR);
+    transition: 1s;
+    opacity: 0;
+}
+.imgs .layer p{
+    position: relative;
+    bottom: 10%;
+    color: var(--MAIN-COLOR);
+    transition: 1s;
+    opacity: 0;
+    font-size: 2rem;
+}
+.imgs img:hover{
+    opacity: 0.5;
+}
+.imgs .layer:hover h1,.layer:hover p{
+    opacity: 1;
+    position: relative;
+    bottom: 60%;
+}
+.q1 {
+    width: 96%;
+    margin-left: 2rem;
+    padding: 0.8rem;
+    border: 1px solid var(--BG-COLOR);
+    border-right: none;
+    border-left: none;
+    display: flex;
+    justify-content: space-between;
+  }
+.q1 p {
+    font-size: 2rem;
+  }
+.q1 .plus {
+    background: var(--BTN-COLOR);
+    border: none;
+    font-size: 3rem;
+    color: var(--PLUS-COLOR);
+    cursor: pointer;
+}
+.p{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+footer{
+    background-color: var(--BG-COLOR);
+    color: var(--MAIN-COLOR);
+    display: flex;
+    text-align: center;
+}
+footer figure{
+    display: flex;
+    text-align: center;
+}
+footer figure figcaption{
+    margin-top: 2.6rem;
+    font-size: 1.7rem;
+}
+.flex1{
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+}
+.flex1 .img1{
+    width: 200px;
+    height: 160px;
+}
+.flex1 h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.flex2{
+    margin: 8rem;
+    margin-left: 15rem;
+}
+.flex2 h1{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.flex2 p{
+    font-size: 2rem;
+    position: relative;
+    top: 100%;
+}
