@@ -1,212 +1,249 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'roboto',sans-serif;
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(main2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-:root{
-    --BG-COLOR:black;
-    --MAIN-COLOR:white;
+/* FONT FAMILY */
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+/* VARIABLES */
+
+:root {
+  --BG-COLOR: black;
+  --MAIN-COLOR: white;
 }
 
-.signup_body{
-    width: 460px;
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather", sans-serif;
 }
-.signup_body h1{
-    font-size: 3rem;
-    font-weight: 500;
+
+body {
+  height: 100vh;
+  background-image: url(main2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.full_name,.email,.password,.ps{
-    margin-bottom: 1rem;
-    text-align: left;
+
+.signup_body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  gap: 2rem;
+  place-items: center;
 }
-.student_name,.grade,.section,.phone_number{
-    margin-bottom: 1rem;
-    text-align: left;
+
+.signup_body h1 {
+  font-size: 2.3rem;
+  font-weight: lighter;
 }
-.signup_body label{
+
+.signup_body form {
+  display: grid;
+  place-items: center;
+}
+
+.full_name,
+.email,
+.password,
+.ps {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.student_name,
+.grade,
+.section,
+.phone_number {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.signup_body label {
+  font-size: 1rem;
+}
+
+.signup_body input {
+  width: 300px;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid var(--BG-COLOR);
+  outline: none;
+}
+
+.signup_body p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.signup_body button {
+  width: 140px;
+  height: 50px;
+  font-size: 1rem;
+  background: var(--BG-COLOR);
+  color: var(--MAIN-COLOR);
+  border: 1px solid;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid;
+  outline: none;
+  outline-color: none;
+}
+
+.signup_body button:hover {
+  background: var(--MAIN-COLOR);
+  color: var(--BG-COLOR);
+  border: 0.5px solid #333;
+}
+
+.phone-position {
+  display: flex;
+  width: 450px;
+  border: 1px solid;
+}
+
+.phone-position input {
+  border: none;
+}
+
+.eth-no {
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+
+/*MEDIA QUERIES*/
+/*
+@media screen and (max-width: 912px) {
+  figure img {
+    width: 120px;
+    height: 125px;
+  }
+  .signup_body h1 {
+    font-size: 2.75rem;
+    left: 40%;
+  }
+  .signup_body label {
     font-size: 1.5rem;
-}
-.signup_body input{
-    width: 450px;
-    font-size: 1.5rem;
-    padding: 10px;
-    border: 1px solid var(--BG-COLOR);
-    outline: none;
-}
-.signup_body p{
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-.signup_body button{
-    width: 176px;
+  }
+  .signup_body input {
+    width: 500px;
+    font-size: 2rem;
+    padding: 7px;
+  }
+  .signup_body p {
+    font-size: 1.8rem;
+  }
+  .signup_body button {
+    width: 170px;
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+  .signup_body button:hover {
     background: var(--BG-COLOR);
     color: var(--MAIN-COLOR);
-    border: 1px solid;
-    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  figure img {
+    width: 90px;
+    height: 95px;
+  }
+  .signup_body {
+    width: 300px;
+    top: 50%;
+  }
+  .signup_body h1 {
+    font-size: 2.5rem;
+  }
+  .full_name {
+    margin-top: 2.5rem;
+  }
+  .signup_body input {
+    width: 300px;
     font-size: 1.5rem;
-    transition:1s;
-    cursor: pointer;
-}
-.signup_body button:hover{
-    background: var(--MAIN-COLOR);
-    color: var(--BG-COLOR);
-    border: 0.5px solid #333;
-}
-.phone-position{
-    display: flex;
-    width: 450px;
-    border: 1px solid;
-}
-.phone-position input{
-    border: none;
-}
-.eth-no{
-    font-size: 1.5rem;
-    margin-top: 8px;
-}
-/*MEDIA QUERIES*/
-
-
-@media screen and (max-width:912px){
-    figure img{
-        width: 120px;
-        height: 125px;
-    }
-    .signup_body h1{
-        font-size: 2.75rem;
-        left: 40%;
-    }
-    .signup_body label{
-        font-size: 1.5rem;
-    }
-    .signup_body input{
-        width: 500px;
-        font-size: 2rem;
-        padding: 7px;
-    }
-    .signup_body p{
-        font-size: 1.8rem;
-    }
-    .signup_body button{
-        width: 170px;
-        padding: 1rem;
-        font-size: 1.3rem;
-    }
-    .signup_body button:hover{
-        background: var(--BG-COLOR);
-        color: var(--MAIN-COLOR);
-    }
+    padding: 5px;
+  }
+  .signup_body p {
+    font-size: 1.2rem;
+  }
+  .signup_body button {
+    width: 120px;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+  .signup_body button:hover {
+    background: var(--BG-COLOR);
+    color: var(--MAIN-COLOR);
+  }
 }
 
-@media screen  and (max-width:414px) {
-    figure img{
-        width: 90px;
-        height: 95px;
-    }
-    .signup_body{
-        width: 300px;
-        top: 50%;
-    }
-    .signup_body h1{
-        font-size: 2.5rem;
-    }
-    .full_name{
-        margin-top: 2.5rem;
-    }
-    .signup_body input{
-        width: 300px;
-        font-size: 1.5rem;
-        padding: 5px;
-    }
-    .signup_body p{
-        font-size: 1.2rem;
-    }
-    .signup_body button{
-        width: 120px;
-        padding: 0.8rem;
-        font-size: 1.2rem;
-    }
-    .signup_body button:hover{
-        background: var(--BG-COLOR);
-        color: var(--MAIN-COLOR);
-    }
+@media screen and (max-width: 375px) {
+  figure img {
+    width: 60px;
+    height: 65px;
+  }
+  .signup_body {
+    width: 300px;
+    left: 45%;
+  }
+  .signup_body h1 {
+    font-size: 2rem;
+  }
+  .signup_body label {
+    font-size: 1rem;
+  }
+  .signup_body input {
+    width: 280px;
+    font-size: 1.2rem;
+    padding: 2px;
+  }
+  .signup_body p {
+    font-size: 1rem;
+  }
+  .signup_body button {
+    width: 100px;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .signup_body button:hover {
+    background: var(--BG-COLOR);
+    color: var(--MAIN-COLOR);
+  }
 }
-
-@media screen  and (max-width:375px) {
-    figure img{
-        width: 60px;
-        height: 65px;
-    }
-    .signup_body{
-        width: 300px;
-        left: 45%;
-    }
-    .signup_body h1{
-        font-size: 2rem;
-    }
-    .signup_body label{
-        font-size: 1rem;
-    }
-    .signup_body input{
-        width: 280px;
-        font-size: 1.2rem;
-        padding: 2px;
-    }
-    .signup_body p{
-        font-size: 1rem;
-    }
-    .signup_body button{
-        width: 100px;
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
-    .signup_body button:hover{
-        background: var(--BG-COLOR);
-        color: var(--MAIN-COLOR);
-    }
+@media screen and (max-width: 320px) {
+  figure img {
+    width: 50px;
+    height: 55px;
+  }
+  .signup_body {
+    width: 240px;
+    left: 50%;
+  }
+  .signup_body h1 {
+    font-size: 1.7rem;
+  }
+  .signup_body input {
+    width: 240px;
+    font-size: 1rem;
+    padding: 2px;
+  }
+  .signup_body p {
+    font-size: 1rem;
+  }
+  .signup_body button {
+    width: 100px;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  .signup_body button:hover {
+    background: var(--BG-COLOR);
+    color: var(--MAIN-COLOR);
+  }
 }
-@media screen and (max-width:320px){
-    figure img{
-        width: 50px;
-        height: 55px;
-    }
-    .signup_body{
-        width: 240px;
-        left: 50%;
-    }
-    .signup_body h1{
-        font-size: 1.7rem;
-    }
-    .signup_body input{
-        width: 240px;
-        font-size: 1rem;
-        padding: 2px;
-    }
-    .signup_body p{
-        font-size: 1rem;
-    }
-    .signup_body button{
-        width: 100px;
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
-    .signup_body button:hover{
-        background: var(--BG-COLOR);
-        color: var(--MAIN-COLOR);
-    }
-}
+*/
