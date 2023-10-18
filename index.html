@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" href="school-logo/dlog.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="icon" href="icons/school-logo.png" />
     <title>Addis Global Academy</title>
   </head>
   <body>
@@ -17,7 +18,6 @@
         <ul>
           <li><a href="signup1.html">Sign Up</a></li>
           <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
           <li>
             <button>
               <a href="#">Apply</a>
@@ -41,31 +41,6 @@
         </ul>
       </section>
     </main>
-    <!--   <section class="page2">
-      <div class="title-background">
-        <h1>Status</h1>
-      </div>
-      <main>
-        <div class="socials-website">
-          <h2>Socials</h2>
-          <h1>Website</h1>
-        </div>
-      </main>
-      <section class="counters">
-        <div class="teachers">
-          <h1>Teachers</h1>
-          <span class="no"> 40 </span>
-        </div>
-        <div class="staff">
-          <h1>Staff</h1>
-          <span class="no"> 60 </span>
-        </div>
-        <div class="students">
-          <h1>Students</h1>
-          <span class="no"> 1.5k </span>
-        </div>
-      </section>
-    </section> -->
 
     <!-- SCHOOL DIVISIONS -->
 
@@ -100,7 +75,7 @@
     </section>
 
     <!-- FREQUENTLY ASKED QUESTIONS -->
-
+    <!-- 
     <section id="faq_section">
       <div class="title-background">
         <h1>Frequently Asked Questions</h1>
@@ -169,7 +144,7 @@
         </article>
       </section>
     </section>
-
+ -->
     <!-- PROCEEDING OPTIONS -->
 
     <section id="option">
@@ -189,43 +164,60 @@
     <!-- FOOTER -->
 
     <footer>
-      <figure id="school-logo">
-        <img src="icons/logo.png" />
-        <figcaption>Addis Global Academy</figcaption>
-      </figure>
+      <p>Addis Global Academy</p>
       <section id="contact_info">
         <article>
           <h1>Contact Us</h1>
           <figure>
-            <img src="icons/email-icon.png" />
+            <div class="icon_container">
+              <img src="icons/email-icon.png" />
+            </div>
             <figcaption>Email</figcaption>
           </figure>
           <figure>
-            <img src="icons/CI.png" />
+            <div class="icon_container">
+              <img src="icons/call-icon.png" />
+            </div>
             <figcaption>Mobile</figcaption>
           </figure>
         </article>
         <article>
           <h1>Social Media</h1>
           <figure>
-            <img src="#" />
+            <div class="icon_container">
+              <img src="icons/aga-facebook-icon.jpg" />
+            </div>
             <figcaption>Facboook</figcaption>
           </figure>
           <figure>
-            <img src="#" />
+            <div class="icon_container">
+              <img src="icons/aga-telegram-icon.jpg" />
+            </div>
             <figcaption>Telegram</figcaption>
           </figure>
         </article>
         <article>
-          <h1>Location</h1>
-          <figure>
-            <img src="Images/school-location.jpg" />
-          </figure>
+          <h1>
+            <img width="20px" src="icons/location-icon.png" alt="" /> Location
+          </h1>
+          <address>Bole, Addis Ababa. Behing Bole Airport</address>
         </article>
       </section>
-      <section id="copyright">
-        &copy; Addis Global Academy 2023, All Rights Reserved
+      <section id="sub_footer">
+        <article>&copy; Addis Global Academy 2023, All Rights Reserved</article>
+        <ul>
+          <li><a href="">Terms Of Service</a></li>
+          <li><a href="">Privacy And Policy</a></li>
+          <li><a href="">Achievements</a></li>
+          <li><a href="">News</a></li>
+        </ul>
       </section>
     </footer>
+    <script>
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("scroll", window.scrollY > 0);
+      });
+    </script>
   </body>
 </html>
