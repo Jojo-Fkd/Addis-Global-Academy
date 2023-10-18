@@ -393,8 +393,9 @@ footer {
 
 #contact_info article {
   width: 30vw;
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #contact_info article h1 {
@@ -413,6 +414,10 @@ footer {
 
 #contact_info article figure img {
   width: 40px;
+}
+
+#contact_info article figure img:last-child {
+  width: 300px;
 }
 
 #contact_info article figure figcaption {
