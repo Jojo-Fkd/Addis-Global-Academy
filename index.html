@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <link rel="icon" href="icons/school-logo.png" />
+    <script defer src="js/landing.js"></script>
     <title>Addis Global Academy</title>
   </head>
   <body>
@@ -31,13 +32,18 @@
 
     <main id="main_content">
       <section id="front_page">
-        <img src="Images/main.png" alt="front page background image" />
-        <h1>AIMING FOR EXELLENCE</h1>
+        <div class="slider">
+          <img src="" alt="front page background image" />
+        </div>
+        <section>
+          <button>left</button>
+          <h1>AIMING FOR EXELLENCE</h1>
+          <button>right</button>
+        </section>
         <ul class="img-no-teller">
-          <li id="int1"></li>
-          <li id="int2"></li>
-          <li id="int3"></li>
-          <li id="int4"></li>
+          <li id="1"></li>
+          <li id="2"></li>
+          <li id="3"></li>
         </ul>
       </section>
     </main>
@@ -54,22 +60,40 @@
           <img src="Images/PS.png" id="primary" />
           <figcaption>
             <h1>Primary School</h1>
-            <p>From Nursery to Grade 5</p>
+            <p>Nursery to Grade 5</p>
           </figcaption>
+          <div class="bg"></div>
+
+          <a href="">
+            <p>Enroll</p>
+            <div class="proceed_container"></div>
+          </a>
         </figure>
         <figure>
           <img src="Images/MS.png" id="secondary" />
           <figcaption>
             <h1>Middle School</h1>
-            <p>From Grade 6 to Grade 8</p>
+            <p>Grade 6 to Grade 8</p>
           </figcaption>
+          <div class="bg"></div>
+
+          <a href="">
+            <p>Enroll</p>
+            <div class="proceed_container"></div>
+          </a>
         </figure>
         <figure>
           <img src="Images/HS.png" id="secondary" />
           <figcaption>
             <h1>High School</h1>
-            <p>From Grade 9 to Grade 12</p>
+            <p>Grade 9 to Grade 12</p>
           </figcaption>
+          <div class="bg"></div>
+
+          <a href="signin.html">
+            <p>Enroll</p>
+            <div class="proceed_container"></div>
+          </a>
         </figure>
       </article>
     </section>
@@ -200,7 +224,7 @@
           <h1>
             <img width="20px" src="icons/location-icon.png" alt="" /> Location
           </h1>
-          <address>Bole, Addis Ababa. Behing Bole Airport</address>
+          <address>Bole, Addis Ababa. Behind Bole Airport</address>
         </article>
       </section>
       <section id="sub_footer">

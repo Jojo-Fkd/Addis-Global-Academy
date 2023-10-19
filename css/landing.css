@@ -1,3 +1,30 @@
+.title-background {
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+  color: black;
+  display: flex;
+  gap: 0.7rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-background h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.styler {
+  width: 80px;
+  height: 2px;
+  background: black;
+}
+
+#faq_section .title-background .styler {
+  width: 150px;
+}
+
 #front_page {
   display: flex;
   flex-direction: column;
@@ -5,6 +32,15 @@
   align-items: center;
   height: 100vh;
   max-width: 100vw;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+#front_page section {
+  z-index: 2;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
 }
 
 #front_page img {
@@ -13,7 +49,25 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 1;
+  object-fit: cover;
+}
+
+#front_page button {
+  z-index: 2;
+}
+
+#front_page img.active {
+  animation: imageAppear 0.6s ease;
+}
+
+@keyframes imageAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #front_page h1 {
@@ -21,12 +75,14 @@
   font-size: 3.5rem;
   font-weight: normal;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 .img-no-teller {
   display: flex;
   gap: 0.5rem;
   transform: translateY(35vh);
+  z-index: 2;
 }
 
 .img-no-teller li {
@@ -49,16 +105,99 @@
 }
 
 #school-divisions figure {
-  width: 25vw;
+  width: 23vw;
   aspect-ratio: 3 / 4;
   position: relative;
 }
 
 #school-divisions figure img {
   position: absolute;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+  z-index: -1;
+}
+
+#school-divisions figure .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#school-divisions figure a:any-link {
+  width: 100px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  color: var(--MAIN-COLOR);
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+#school-divisions figure a:any-link:hover {
+  transform: translateX(-5px);
+}
+
+#school-divisions figure a:any-link p {
+  transform: translateY(6px);
+}
+
+#school-divisions figure a:any-link .proceed_container {
+  height: 1px;
+  width: 20px;
+  background: var(--MAIN-COLOR);
+  transform: rotate(40deg);
+  display: block;
+  position: relative;
+}
+
+#school-divisions figure a:any-link .proceed_container::before {
+  position: absolute;
+  content: "";
+  height: inherit;
+  width: inherit;
+  background: inherit;
+  transform: translate(8px, 10px) rotate(-80deg);
+}
+
+#school-divisions figure figcaption {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 10;
+}
+
+#school-divisions figure figcaption {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+#school-divisions figure figcaption h1 {
+  font-size: 1.5rem;
+}
+
+#school-divisions figure figcaption p {
+  font-weight: lighter;
+  text-shadow: 5px 5px 10px var(--MAIN-COLOR);
+}
+
+#school-divisions figure:hover .bg,
+#school-divisions figure:hover a:any-link,
+#school-divisions figure:hover figcaption {
+  opacity: 1;
 }
 
 /* FAG STYLING */
@@ -131,11 +270,31 @@
 #option div ul li {
   border: 1px solid;
   background: var(--MAIN-COLOR);
-  padding: 0.6rem 2.6rem;
+  height: 45px;
+  width: 160px;
   border-radius: 5px;
+  transition: all 0.3s ease;
+  border: 1px solid white;
+  position: relative;
 }
 
 #option div ul li a:any-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
   color: var(--BG-COLOR);
   font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+#option div ul li:hover {
+  background: var(--BG-COLOR);
+}
+
+#option div ul li:hover a:any-link {
+  color: var(--MAIN-COLOR);
 }
