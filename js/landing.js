@@ -4,9 +4,17 @@ const imageTracker = document.querySelectorAll(".img-no-teller li");
 
 let id = 0;
 
+let idLengthNo = 0;
+
+let idLength = sliderImages.forEach((img) => {
+  if (img.hasAttribute("slider-img")) {
+    idLengthNo = Number(img.id);
+  }
+});
+
 setInterval(() => {
   id++;
-  if (id === 3) {
+  if (id > idLengthNo) {
     sliderImages.forEach((img) => {
       if (img.hasAttribute("slider-img")) {
         img.style.opacity = "0";

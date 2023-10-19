@@ -87,6 +87,12 @@
 
 .img-no-teller li.default {
   transform: scale(1.2);
+  opacity: 1;
+}
+
+.img-no-teller li[id] {
+  transform: scale(1);
+  opacity: 0.6;
 }
 
 /* SCHOOL DIVISIONS STYLING */
