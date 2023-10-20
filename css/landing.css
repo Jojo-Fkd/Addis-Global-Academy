@@ -63,16 +63,14 @@
   }
 }
 
-.position_tool {
-  height: 30vh;
-}
-
 #front_page article {
   height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  padding-bottom: 2rem;
 }
 
 #front_page article h1 {
