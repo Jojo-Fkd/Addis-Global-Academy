@@ -33,10 +33,6 @@ button {
 
 /*MAINCODE*/
 
-#front_page {
-  height: 100vh;
-}
-
 nav {
   width: 100vw;
   padding: 0.6rem 0;
