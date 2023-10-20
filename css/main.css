@@ -31,6 +31,10 @@ button {
   cursor: pointer;
 }
 
+img::selection {
+  background: none;
+}
+
 /*MAINCODE*/
 
 nav {
