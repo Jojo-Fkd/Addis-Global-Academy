@@ -35,7 +35,7 @@ button {
 
 nav {
   width: 100vw;
-  padding: 0.6rem 0;
+  padding: 0.5rem 0;
   background: var(--BG-COLOR);
   color: var(--MAIN-COLOR);
   display: flex;
