@@ -35,7 +35,32 @@ img::selection {
   background: none;
 }
 
-/*MAINCODE*/
+/* GENERAL STYLE FOR THE HEADER OF EACH PAGE */
+
+.title-background {
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+  color: black;
+  display: flex;
+  gap: 0.7rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-background h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.styler {
+  width: 80px;
+  height: 2px;
+  background: black;
+}
+
+/* NAVIGATION */
 
 nav {
   width: 100vw;
@@ -72,7 +97,7 @@ nav section ul {
   gap: 3rem;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 60vw;
 }
 
 nav section ul li a:any-link {
@@ -134,10 +159,89 @@ nav section ul li button:hover a:any-link {
   color: var(--MAIN-COLOR);
 }
 
+.side_bar_container {
+  display: none;
+}
+
+/* NAVIGATION SECTION RESPONSIVE DESIGN */
+
+@media screen and (max-width: 990px) {
+  nav section ul {
+    width: 70vw;
+  }
+
+  nav section ul li a:any-link {
+    font-size: 1rem;
+  }
+
+  nav section ul li button a:any-link {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 842px) {
+  nav section ul {
+    width: 80vw;
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  nav section ul {
+    width: 190px;
+    flex-flow: row-reverse;
+    gap: 1rem;
+  }
+
+  .side_bar_container {
+    display: block;
+  }
+
+  .side_bar_icon_container {
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-content: center;
+  }
+
+  .side_bar_icon {
+    width: 35px;
+    height: 1.2px;
+    background: white;
+    position: relative;
+  }
+
+  .side_bar_icon::before,
+  .side_bar_icon::after {
+    position: absolute;
+    content: "";
+    height: inherit;
+    width: 100%;
+    background: inherit;
+  }
+
+  .side_bar_icon::before {
+    top: -10px;
+    left: 0;
+  }
+
+  .side_bar_icon::after {
+    bottom: -10px;
+    left: 0;
+  }
+
+  nav section ul li {
+    display: none;
+  }
+
+  nav section ul li:last-child {
+    display: block;
+  }
+}
+
 /* FOOTER STYLES */
 
 footer {
-  margin-top: 2rem;
   background-color: var(--BG-COLOR);
   color: var(--MAIN-COLOR);
 }
@@ -167,6 +271,13 @@ footer p {
   font-size: 1.5rem;
   font-weight: lighter;
   margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+#contact_info article h1 .caret_down_container {
+  display: none;
 }
 
 #contact_info article figure {
@@ -200,6 +311,7 @@ footer p {
   padding-top: 3rem;
   max-width: 100vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -209,6 +321,8 @@ footer p {
 
 #sub_footer ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -224,4 +338,115 @@ footer p {
 
 #sub_footer ul li a:hover {
   text-decoration: underline;
+}
+
+/* FOOTER RESPONSIVE DESIGN */
+
+@media screen and (max-width: 895px) {
+  /* FOOTER STYLES */
+
+  footer p {
+    font-size: 1.8rem;
+  }
+
+  #contact_info article h1 {
+    font-size: 1.3rem;
+  }
+
+  .icon_container img {
+    width: 28px !important;
+  }
+
+  #contact_info article figure figcaption {
+    font-size: 1rem;
+  }
+
+  #sub_footer article {
+    font-size: 0.8rem;
+  }
+
+  #sub_footer ul {
+    gap: 0.9rem;
+  }
+
+  #sub_footer ul li {
+    padding-right: 0.9rem;
+  }
+
+  #sub_footer ul li a:any-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  #sub_footer {
+    flex-flow: column-reverse;
+    gap: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  #contact_info {
+    flex-direction: column;
+  }
+
+  #contact_info article {
+    align-items: flex-start;
+    width: 100%;
+    padding-left: 1rem;
+    border-bottom: 0.7px solid rgba(255, 255, 255, 0.3);
+  }
+
+  #contact_info article h1 .caret_down_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 21px;
+    height: 25px;
+  }
+
+  #contact_info article figure,
+  #contact_info article address {
+    display: none;
+  }
+
+  .caret {
+    height: 12px;
+    width: 1px;
+    background: white;
+    border-radius: 5px;
+  }
+
+  .caret:first-child {
+    transform: rotate(-40deg);
+  }
+
+  .caret:last-child {
+    transform: rotate(40deg);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  nav h1 {
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  footer p {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 352px) {
+  #sub_footer article {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 342px) {
+  footer p {
+    font-size: 1.4rem;
+  }
 }

@@ -1,37 +1,10 @@
-.title-background {
-  width: 100%;
-  height: 20vh;
-  text-align: center;
-  color: black;
-  display: flex;
-  gap: 0.7rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.title-background h1 {
-  font-size: 2.2rem;
-  font-weight: 500;
-}
-
-.styler {
-  width: 80px;
-  height: 2px;
-  background: black;
-}
-
-#faq_section .title-background .styler {
-  width: 150px;
-}
-
 #front_page {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   min-height: 100vh;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   max-width: 100vw;
 }
 
@@ -69,7 +42,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 2.4rem;
+  padding-bottom: 2rem;
 }
 
 #front_page article h1 {
@@ -113,7 +86,10 @@
 
 #school-divisions article {
   display: flex;
+  gap: 2rem;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
 }
 
 #school-divisions figure {
@@ -309,4 +285,119 @@
 
 #option div ul li:hover a:any-link {
   color: var(--MAIN-COLOR);
+}
+
+/* LANDING PAGE RESPONSIVE DESIGN */
+
+@media screen and (max-width: 990px) {
+  /* SCHOOL DIVISIONS STYLING */
+
+  #school-divisions figure {
+    width: 30vw;
+  }
+
+  /* OPTION SECTION STYLES */
+
+  #option div {
+    width: 500px;
+  }
+
+  #option div h3 {
+    font-size: 2rem;
+  }
+
+  #option div ul li a:any-link {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 892px) {
+  #front_page article h1 {
+    font-size: 3.1rem;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  #school-divisions figure {
+    width: 45vw;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  #front_page article h1 {
+    font-size: 2.9rem;
+  }
+}
+
+.mobile_ver {
+  display: none;
+}
+
+@media screen and (max-width: 632px) {
+  #front_page article h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #front_page article h1:not(.mobile_ver) {
+    display: none;
+  }
+
+  .mobile_ver {
+    font-size: 2.4rem !important;
+    text-align: center;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  #school-divisions figure {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  #option div {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  #option div {
+    width: 350px;
+  }
+
+  #option div h3 {
+    font-size: 1.6rem;
+  }
+
+  #option div ul li {
+    width: 120px;
+  }
+
+  #option div ul li a:any-link {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  #option div {
+    width: 320px;
+  }
+
+  #option div ul {
+    width: 120%;
+  }
+
+  #option div ul li {
+    width: 120px;
+    height: 42px;
+  }
+}
+
+@media screen and (max-width: 348px) {
+  #school-divisions figure {
+    width: 280px;
+  }
 }

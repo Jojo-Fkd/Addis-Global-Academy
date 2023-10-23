@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="icon" href="icons/school-logo.png" />
+    <title>Addis Global Academy</title>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav>
+      <h1>
+        <a href="index.html">
+          <img src="icons/logo.png" alt="school logo" />
+        </a>
+      </h1>
+      <section>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="">News & Events</a></li>
+          <li><a href="signup1.html">Sign Up</a></li>
+          <li>
+            <button>
+              <a href="#">Apply</a>
+            </button>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <!--MAIN CONTENT-->
+
+    <main id="main">
+      <article>
+        <h1>Welcome back !!!</h1>
+      </article>
+    </main>
+
+    <!-- VIDEO CONTENT -->
+
+    <section id="video">
+      <article class="title-background">
+        <h1>Video</h1>
+        <div class="styler"></div>
+      </article>
+      <figure>
+        <img src="Images/vedio-img.png" />
+        <figcaption>
+          <button type="button">Video</button>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="main_founders">
+      <div class="title-background">
+        <h1>Main Founders</h1>
+        <div class="styler"></div>
+      </div>
+      <section>
+        <figure id="first-founder">
+          <img src="Images/mai-founder-first.png" />
+          <article>
+            <p>
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              suscipit aliquid eveniet architecto facilis dicta corporis sequi,
+              dolore nam cumque est totam rem ipsa dolores odio obcaecati
+              doloremque. Hic, sapiente? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Autem suscipit aliquid eveniet architecto
+              facilis dicta corporis sequi, dolore nam cumque est totam rem ipsa
+              dolores odio obcaecati doloremque. Hic, sapiente? "
+            </p>
+          </article>
+        </figure>
+        <figure id="second-founder">
+          <img src="Images/main-founder-second.png" />
+          <article>
+            <p>
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              suscipit aliquid eveniet architecto facilis dicta corporis sequi,
+              dolore nam cumque est totam rem ipsa dolores odio obcaecati
+              doloremque. Hic, sapiente? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Autem suscipit aliquid eveniet architecto
+              facilis dicta corporis sequi, dolore nam cumque est totam rem ipsa
+              dolores odio obcaecati doloremque. Hic, sapiente? "
+            </p>
+          </article>
+        </figure>
+      </section>
+    </section>
+    <!-- FOOTER -->
+
+    <footer>
+      <p>Addis Global Academy</p>
+      <section id="contact_info">
+        <article>
+          <h1>Contact Us</h1>
+          <figure>
+            <div class="icon_container">
+              <img src="icons/email-icon.png" />
+            </div>
+            <figcaption>Email</figcaption>
+          </figure>
+          <figure>
+            <div class="icon_container">
+              <img src="icons/call-icon.png" />
+            </div>
+            <figcaption>Mobile</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h1>Social Media</h1>
+          <figure>
+            <div class="icon_container">
+              <img src="icons/aga-facebook-icon.jpg" />
+            </div>
+            <figcaption>Facboook</figcaption>
+          </figure>
+          <figure>
+            <div class="icon_container">
+              <img src="icons/aga-telegram-icon.jpg" />
+            </div>
+            <figcaption>Telegram</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h1>
+            <img width="20px" src="icons/location-icon.png" alt="" /> Location
+          </h1>
+          <address>Bole, Addis Ababa. Behind Bole Airport</address>
+        </article>
+      </section>
+      <section id="sub_footer">
+        <article>&copy; Addis Global Academy 2023, All Rights Reserved</article>
+        <ul>
+          <li><a href="">Terms Of Service</a></li>
+          <li><a href="">Privacy And Policy</a></li>
+          <li><a href="">Achievements</a></li>
+          <li><a href="">News</a></li>
+        </ul>
+      </section>
+    </footer>
+    <script>
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("scroll", window.scrollY > 0);
+      });
+    </script>
+  </body>
+</html>
