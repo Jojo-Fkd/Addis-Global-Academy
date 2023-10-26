@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="icon" href="icons/school-logo.png" />
+    <script defer src="js/script.js"></script>
     <title>Addis Global Academy</title>
   </head>
   <body>
@@ -20,11 +21,15 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="">News & Events</a></li>
-          <li><a href="signup1.html">Sign Up</a></li>
+          <li><a href="news.html">News & Events</a></li>
+          <section class="side_bar_container">
+            <div class="side_bar_icon_container">
+              <div class="side_bar_icon"></div>
+            </div>
+          </section>
           <li>
             <button>
-              <a href="#">Apply</a>
+              <a href="signup1.html">Sign Up</a>
             </button>
           </li>
         </ul>
@@ -33,11 +38,40 @@
 
     <!--MAIN CONTENT-->
 
-    <main id="main">
+    <section id="front_page">
+      <div class="slider">
+        <img
+          oncontextmenu="return false"
+          draggable="false"
+          src="Images/SV1.png"
+          alt="front page background image"
+        />
+        <img
+          oncontextmenu="return false"
+          draggable="false"
+          id="1"
+          slider-img
+          src="Images/SV2.png"
+          alt="front page background image"
+        />
+        <img
+          oncontextmenu="return false"
+          draggable="false"
+          id="2"
+          slider-img
+          src="Images/SV3.png"
+          alt="front page background image"
+        />
+      </div>
       <article>
-        <h1>Welcome back !!!</h1>
+        <h1>ABOUT US</h1>
+        <ul class="img-no-teller">
+          <li class="default"></li>
+          <li id="1"></li>
+          <li id="2"></li>
+        </ul>
       </article>
-    </main>
+    </section>
 
     <!-- VIDEO CONTENT -->
 
@@ -47,10 +81,11 @@
         <div class="styler"></div>
       </article>
       <figure>
-        <img src="Images/vedio-img.png" />
-        <figcaption>
-          <button type="button">Video</button>
-        </figcaption>
+        <img
+          draggable="false"
+          oncontextmenu="return false"
+          src="Images/vedio-img.png"
+        />
       </figure>
     </section>
 
@@ -61,42 +96,132 @@
       </div>
       <section>
         <figure id="first-founder">
-          <img src="Images/mai-founder-first.png" />
-          <article>
-            <p>
-              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              suscipit aliquid eveniet architecto facilis dicta corporis sequi,
-              dolore nam cumque est totam rem ipsa dolores odio obcaecati
-              doloremque. Hic, sapiente? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Autem suscipit aliquid eveniet architecto
-              facilis dicta corporis sequi, dolore nam cumque est totam rem ipsa
-              dolores odio obcaecati doloremque. Hic, sapiente? "
-            </p>
-          </article>
+          <img
+            draggable="false"
+            oncontextmenu="return false"
+            src="Images/mai-founder-first.png"
+          />
+          <figcaption>
+            <p><q>Lorem ipsum dolor sit amet consectetur adipiscing elit</q></p>
+          </figcaption>
         </figure>
         <figure id="second-founder">
-          <img src="Images/main-founder-second.png" />
-          <article>
-            <p>
-              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
-              suscipit aliquid eveniet architecto facilis dicta corporis sequi,
-              dolore nam cumque est totam rem ipsa dolores odio obcaecati
-              doloremque. Hic, sapiente? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Autem suscipit aliquid eveniet architecto
-              facilis dicta corporis sequi, dolore nam cumque est totam rem ipsa
-              dolores odio obcaecati doloremque. Hic, sapiente? "
-            </p>
-          </article>
+          <img
+            draggable="false"
+            oncontextmenu="return false"
+            src="Images/main-founder-second.png"
+          />
+          <figcaption>
+            <p><q>Lorem ipsum dolor sit amet consectetur adipiscing elit</q></p>
+          </figcaption>
         </figure>
       </section>
     </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS -->
+
+    <section id="faq_section">
+      <div class="title-background">
+        <h1>FAQ</h1>
+        <div class="styler"></div>
+      </div>
+      <section class="faq-body">
+        <section>
+          <article>
+            <h3>Question 1</h3>
+            <span class="answer_toggle">
+              <img src="icons/caret-down-solid.svg" alt="answer toggle icon" />
+            </span>
+          </article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Cupiditate, molestiae. Quod doloremque sed eum omnis. Minima quas
+            sint, dolorum omnis, accusamus obcaecati culpa qui unde vitae, at
+            atque numquam incidunt?
+          </p>
+        </section>
+        <section>
+          <article>
+            <h3>Question 2</h3>
+            <span class="answer_toggle">
+              <img src="icons/caret-down-solid.svg" alt="answer toggle icon" />
+            </span>
+          </article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Cupiditate, molestiae. Quod doloremque sed eum omnis. Minima quas
+            sint, dolorum omnis, accusamus obcaecati culpa qui unde vitae, at
+            atque numquam incidunt?
+          </p>
+        </section>
+        <section>
+          <article>
+            <h3>Question 3</h3>
+            <span class="answer_toggle">
+              <img src="icons/caret-down-solid.svg" alt="answer toggle icon" />
+            </span>
+          </article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Cupiditate, molestiae. Quod doloremque sed eum omnis. Minima quas
+            sint, dolorum omnis, accusamus obcaecati culpa qui unde vitae, at
+            atque numquam incidunt?
+          </p>
+        </section>
+        <section>
+          <article>
+            <h3>Question 4</h3>
+            <span class="answer_toggle">
+              <img src="icons/caret-down-solid.svg" alt="answer toggle icon" />
+            </span>
+          </article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Cupiditate, molestiae. Quod doloremque sed eum omnis. Minima quas
+            sint, dolorum omnis, accusamus obcaecati culpa qui unde vitae, at
+            atque numquam incidunt?
+          </p>
+        </section>
+        <section>
+          <article>
+            <h3>Question 5</h3>
+            <span class="answer_toggle">
+              <img src="icons/caret-down-solid.svg" alt="answer toggle icon" />
+            </span>
+          </article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Cupiditate, molestiae. Quod doloremque sed eum omnis. Minima quas
+            sint, dolorum omnis, accusamus obcaecati culpa qui unde vitae, at
+            atque numquam incidunt?
+          </p>
+        </section>
+        <section>
+          <article>
+            <h3>Question 6</h3>
+            <span class="answer_toggle">
+              <img src="icons/caret-down-solid.svg" alt="answer toggle icon" />
+            </span>
+          </article>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Cupiditate, molestiae. Quod doloremque sed eum omnis. Minima quas
+            sint, dolorum omnis, accusamus obcaecati culpa qui unde vitae, at
+            atque numquam incidunt?
+          </p>
+        </section>
+      </section>
+    </section>
+
     <!-- FOOTER -->
 
     <footer>
       <p>Addis Global Academy</p>
       <section id="contact_info">
         <article>
-          <h1>Contact Us</h1>
+          <h1>
+            <img width="30px" src="icons/aga-contact-icon.jpg" /> Contact Us
+          </h1>
           <figure>
             <div class="icon_container">
               <img src="icons/email-icon.png" />
@@ -111,7 +236,9 @@
           </figure>
         </article>
         <article>
-          <h1>Social Media</h1>
+          <h1>
+            <img width="30px" src="icons/aga-social-icon.jpg" />Social Media
+          </h1>
           <figure>
             <div class="icon_container">
               <img src="icons/aga-facebook-icon.jpg" />

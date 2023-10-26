@@ -1,82 +1,3 @@
-#front_page {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  min-height: 100vh;
-  padding-bottom: 1rem;
-  max-width: 100vw;
-}
-
-#front_page img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  object-fit: cover;
-  transition: all 0.3s ease;
-}
-
-#front_page img[id] {
-  opacity: 0;
-}
-
-#front_page img.active {
-  animation: imageAppear 0.6s ease;
-}
-
-@keyframes imageAppear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-#front_page article {
-  height: 55vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 2rem;
-}
-
-#front_page article h1 {
-  color: var(--MAIN-COLOR);
-  font-size: 3.5rem;
-  font-weight: normal;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-  z-index: 2;
-}
-
-.img-no-teller {
-  display: flex;
-  gap: 0.5rem;
-  z-index: 2;
-}
-
-.img-no-teller li {
-  background: var(--SIDE-COLOR);
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.img-no-teller li.default {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-.img-no-teller li[id] {
-  transform: scale(1);
-  opacity: 0.6;
-}
-
 /* SCHOOL DIVISIONS STYLING */
 
 #school-divisions {
@@ -188,39 +109,6 @@
   opacity: 1;
 }
 
-/* FAG STYLING */
-
-/* #faq_section {
-  min-height: 100vh;
-}
-
-#faq_section article {
-  width: 100;
-  margin: 0 2rem;
-  padding: 0.8rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#faq_section article p {
-  font-size: 1.7rem;
-}
-
-#faq_section .answer_toggle {
-  background: var(--BTN-COLOR);
-  border: none;
-  font-size: 3rem;
-  color: var(--PLUS-COLOR);
-  cursor: pointer;
-  font-weight: lighter;
-}
-
-#faq_section .answer_toggle img {
-  width: 20px;
-} */
-
 /* OPTION SECTION STYLES */
 
 #option {
@@ -311,43 +199,9 @@
   }
 }
 
-@media screen and (max-width: 892px) {
-  #front_page article h1 {
-    font-size: 3.1rem;
-  }
-}
-
 @media screen and (max-width: 868px) {
   #school-divisions figure {
     width: 45vw;
-  }
-}
-
-@media screen and (max-width: 735px) {
-  #front_page article h1 {
-    font-size: 2.9rem;
-  }
-}
-
-.mobile_ver {
-  display: none;
-}
-
-@media screen and (max-width: 632px) {
-  #front_page article h1 {
-    font-size: 2.4rem;
-  }
-}
-
-@media screen and (max-width: 550px) {
-  #front_page article h1:not(.mobile_ver) {
-    display: none;
-  }
-
-  .mobile_ver {
-    font-size: 2.4rem !important;
-    text-align: center;
-    display: block;
   }
 }
 
