@@ -30,7 +30,7 @@
   justify-content: space-evenly;
   align-items: center;
   background: var(--BG-COLOR);
-  color: var(--MAIN-COLOR);
+  color: var(--FONT-COLOR);
   border: 1px solid black;
   border-radius: 10px;
 }
@@ -47,7 +47,7 @@
 }
 
 .filter ul li.active {
-  background: var(--MAIN-COLOR);
+  background: var(--FONT-COLOR);
   color: var(--BG-COLOR);
 }
 
@@ -128,7 +128,7 @@
 
 .news_content article {
   background: var(--BG-COLOR);
-  color: var(--MAIN-COLOR);
+  color: var(--FONT-COLOR);
   padding: 1rem;
   border-radius: 5px;
   width: 600px;
@@ -191,7 +191,7 @@
 }
 
 .interaction button {
-  background: var(--MAIN-COLOR);
+  background: var(--FONT-COLOR);
   height: 45px;
   width: 125px;
   border: 1px solid white;
@@ -281,7 +281,7 @@
 
 .event {
   background: var(--BG-COLOR);
-  color: var(--MAIN-COLOR);
+  color: var(--FONT-COLOR);
   border: 1px solid black;
   border-radius: 10px;
   padding: 1rem;

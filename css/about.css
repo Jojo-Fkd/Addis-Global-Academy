@@ -88,8 +88,6 @@
 #faq_section .answer_toggle {
   background: var(--BTN-COLOR);
   border: none;
-  font-size: 3rem;
-  color: var(--PLUS-COLOR);
   cursor: pointer;
   font-weight: lighter;
   transition: all 0.3s ease;
