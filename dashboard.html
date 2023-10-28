@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/dash.css" />
     <link rel="icon" href="icons/school-logo.png" />
+    <script defer src="js/script.js"></script>
+    <script defer src="js/dashboard.js"></script>
     <title>Addis Global Academy</title>
   </head>
   <body>
@@ -13,35 +15,134 @@
       <nav>
         <ul>
           <li>
-            <a href="#"><img src="icons/menu.png" /></a>
+            <div class="expand_icon"></div>
           </li>
           <li>
-            <a href="#"><img src="icons/logo.png" /></a>
+            <div>
+              <a href="dashboard.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  style="fill: azure"
+                >
+                  <path
+                    d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <p>Home</p>
           </li>
           <li>
-            <a href="#"><img src="icons/home.png" /></a>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                style="fill: azure"
+              >
+                <path
+                  d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
+                ></path>
+              </svg>
+            </div>
+            <p>Search Students</p>
           </li>
           <li>
-            <a href="#"><img src="icons/calender.png" /></a>
+            <div>
+              <a href="news.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  style="fill: azure"
+                >
+                  <path
+                    d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+                  ></path>
+                  <path
+                    d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <p>News & Events</p>
           </li>
           <li>
-            <a href="#"><img src="icons/education.png" /></a>
+            <a href="about.html">
+              <div class="about_icon">
+                <img width="40px" src="icons/logo.png" alt="" />
+                <span style="color: azure" class="info">i</span>
+              </div>
+            </a>
+            <p>About AGA</p>
           </li>
           <li>
-            <a href="#"><img src="icons/status.png" /></a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#"><img src="icons/call-icon.png" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="icons/settings-icon.png" /></a>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                style="fill: azure"
+              >
+                <path
+                  d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"
+                ></path>
+                <path
+                  d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z"
+                ></path>
+              </svg>
+            </div>
+            <p>Settings</p>
           </li>
         </ul>
       </nav>
     </header>
     <main id="dashboard">
+      <section id="profile">
+        <figure>
+          <figcaption>
+            <ul class="header">
+              <li class="title">
+                <img width="60px" src="icons/school-logo.png" alt="" />
+                <p>21 : 37</p>
+              </li>
+
+              <li class="student_switch">
+                <div class="caret_container">
+                  <div class="caret"></div>
+                  <div class="caret"></div>
+                </div>
+                <div class="student_icon_container">
+                  <img
+                    width="30px"
+                    src="icons/user-graduate-solid.svg"
+                    alt=""
+                  />
+                </div>
+                <p>Jonathan Fekadu</p>
+              </li>
+            </ul>
+            <ul class="nav_elements">
+              <li>Good Afternoon</li>
+              <section>
+                <ul>
+                  <li>+</li>
+                  <li>
+                    <img width="40px" src="Images/mai-founder-first.png" />
+                  </li>
+                  <li>Fekadu Tesfaye</li>
+                </ul>
+              </section>
+            </ul>
+          </figcaption>
+        </figure>
+      </section>
       <section id="upcoming_events">
         <div class="title-background">
           <h1>Events Soon</h1>
@@ -112,34 +213,36 @@
                 <td>3</td>
                 <td>4</td>
                 <td>5</td>
-                <td>6</td>
               </tr>
               <tr>
+                <td>6</td>
                 <td>7</td>
                 <td>8</td>
                 <td>9</td>
                 <td>10</td>
-                <td class="set">11</td>
-                <td>12</td>
               </tr>
               <tr>
+                <td class="set">11</td>
+                <td>12</td>
                 <td>13</td>
                 <td>14</td>
                 <td>15</td>
+              </tr>
+              <tr>
                 <td>16</td>
                 <td>17</td>
                 <td>18</td>
-              </tr>
-              <tr>
                 <td>19</td>
                 <td class="set">20</td>
+              </tr>
+              <tr>
                 <td>21</td>
                 <td>22</td>
                 <td>23</td>
                 <td>24</td>
+                <td>25</td>
               </tr>
               <tr>
-                <td>25</td>
                 <td>26</td>
                 <td>27</td>
                 <td>28</td>
@@ -154,5 +257,115 @@
         </section>
       </section>
     </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <p>Addis Global Academy</p>
+      <section id="contact_info">
+        <article>
+          <h1>
+            Contact Us
+            <div class="caret_down_container">
+              <div class="caret"></div>
+              <div class="caret"></div>
+            </div>
+          </h1>
+          <figure>
+            <div class="icon_container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                style="fill: azure"
+              >
+                <path
+                  d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                ></path>
+              </svg>
+            </div>
+            <figcaption>Email</figcaption>
+          </figure>
+          <figure>
+            <div class="icon_container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                style="fill: azure"
+              >
+                <path
+                  d="M16.57 22a2 2 0 0 0 1.43-.59l2.71-2.71a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0l-1.6 1.59a7.55 7.55 0 0 1-3-1.59 7.62 7.62 0 0 1-1.59-3l1.59-1.6a1 1 0 0 0 0-1.41l-4-4a1 1 0 0 0-1.41 0L2.59 6A2 2 0 0 0 2 7.43 15.28 15.28 0 0 0 6.3 17.7 15.28 15.28 0 0 0 16.57 22zM6 5.41 8.59 8 7.3 9.29a1 1 0 0 0-.3.91 10.12 10.12 0 0 0 2.3 4.5 10.08 10.08 0 0 0 4.5 2.3 1 1 0 0 0 .91-.27L16 15.41 18.59 18l-2 2a13.28 13.28 0 0 1-8.87-3.71A13.28 13.28 0 0 1 4 7.41zM20 11h2a8.81 8.81 0 0 0-9-9v2a6.77 6.77 0 0 1 7 7z"
+                ></path>
+                <path d="M13 8c2.1 0 3 .9 3 3h2c0-3.22-1.78-5-5-5z"></path>
+              </svg>
+            </div>
+            <figcaption>Mobile</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h1>
+            Social Media
+            <div class="caret_down_container">
+              <div class="caret"></div>
+              <div class="caret"></div>
+            </div>
+          </h1>
+          <figure>
+            <div class="icon_container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                viewBox="0 0 24 24"
+                style="fill: azure"
+              >
+                <path
+                  d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"
+                ></path>
+              </svg>
+            </div>
+            <figcaption>Facboook</figcaption>
+          </figure>
+          <figure>
+            <div class="icon_container">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                viewBox="0 0 24 24"
+                style="fill: azure"
+              >
+                <path
+                  d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"
+                ></path>
+              </svg>
+            </div>
+            <figcaption>Telegram</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h1>
+            Location
+            <div class="caret_down_container">
+              <div class="caret"></div>
+              <div class="caret"></div>
+            </div>
+          </h1>
+          <address>Bole, Addis Ababa. Behind Bole Airport</address>
+        </article>
+      </section>
+      <section id="sub_footer">
+        <article>&copy; Addis Global Academy 2023, All Rights Reserved</article>
+        <ul>
+          <li><a href="">Terms Of Service</a></li>
+          <li><a href="">Privacy And Policy</a></li>
+          <li><a href="">Achievements</a></li>
+        </ul>
+      </section>
+    </footer>
+    <div class="dashboard_blur"></div>
   </body>
 </html>

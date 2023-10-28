@@ -5,8 +5,8 @@
 /* VARIABLES */
 
 :root {
-  --BG-COLOR: #2259c6;
-  --FONT-COLOR: white;
+  --BG-COLOR: rgb(64, 128, 255);
+  --FONT-COLOR: azure;
 }
 
 /*RESET*/
@@ -421,6 +421,7 @@ footer p {
 
 #sub_footer article {
   font-size: 0.8rem;
+  text-align: center;
 }
 
 #sub_footer ul {

@@ -47,7 +47,7 @@
 }
 
 .filter ul li.active {
-  background: var(--FONT-COLOR);
+  background: white;
   color: var(--BG-COLOR);
 }
 
