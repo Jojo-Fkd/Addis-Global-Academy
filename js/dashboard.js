@@ -1,4 +1,4 @@
-const sideBar = document.querySelector("nav");
+const dashboardSideBar = document.querySelector("nav");
 const dashBoardBlur = document.querySelector(".dashboard_blur");
 
 const studentSwitchIcon = document.querySelector(
@@ -11,7 +11,7 @@ const studentSwitchSideBar = document.querySelector(".student_option_sideBar");
 const expandIcon = document.querySelector(".expand_icon_container");
 
 expandIcon.onclick = () => {
-  sideBar.classList.toggle("active");
+  dashboardSideBar.classList.toggle("active");
   dashBoardBlur.classList.toggle("blur");
 };
 

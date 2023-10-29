@@ -170,7 +170,7 @@ img::selection {
 
 nav {
   width: 100vw;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
   background: var(--BG-COLOR);
   color: var(--FONT-COLOR);
   display: flex;
@@ -186,16 +186,16 @@ nav h1 {
 }
 
 nav h1 img {
-  width: 80px;
+  width: 70px;
   transition: all 0.3s ease;
 }
 
 nav.scroll {
-  padding: 0.3rem 0;
+  padding: 0.2rem 0;
 }
 
 nav.scroll h1 img {
-  width: 70px;
+  width: 60px;
 }
 
 nav section ul {
@@ -294,7 +294,7 @@ nav section ul li button:hover a:any-link {
   }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 630px) {
   nav section ul {
     width: 190px;
     flex-flow: row-reverse;
@@ -317,6 +317,7 @@ nav section ul li button:hover a:any-link {
     height: 1.2px;
     background: white;
     position: relative;
+    z-index: 1000;
   }
 
   .side_bar_icon::before,
@@ -338,12 +339,57 @@ nav section ul li button:hover a:any-link {
     left: 0;
   }
 
-  nav section ul li {
+  li.first {
     display: none;
   }
 
   nav section ul li:last-child {
     display: block;
+  }
+
+  .side_bar_container ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 7rem;
+    background: var(--BG-COLOR);
+    width: 200px;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .side_bar_container ul.active {
+    opacity: 1;
+  }
+
+  .side_bar_container ul li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
+  .side_bar_blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vw;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .side_bar_blur.blur {
+    z-index: 100;
+    opacity: 1;
   }
 }
 

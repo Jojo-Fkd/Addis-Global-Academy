@@ -23,3 +23,14 @@ faqIcons.forEach((icon) => {
     faq.classList.toggle("active");
   };
 });
+
+/* SIDE BAR ACTIVATION */
+
+const sideBarIcon = document.querySelector(".side_bar_icon_container");
+const sideBar = document.querySelector(".side_bar_container ul");
+const sideBarBlur = document.querySelector(".side_bar_blur");
+
+sideBarIcon.onclick = () => {
+  sideBar.classList.toggle("active");
+  sideBarBlur.classList.toggle("blur");
+};
