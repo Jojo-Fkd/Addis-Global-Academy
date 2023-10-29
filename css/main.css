@@ -26,6 +26,10 @@ ul {
   list-style-type: none;
 }
 
+svg {
+  cursor: pointer;
+}
+
 button {
   cursor: pointer;
 }

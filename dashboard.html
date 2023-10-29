@@ -15,15 +15,17 @@
       <nav>
         <ul>
           <li>
-            <div class="expand_icon"></div>
+            <div class="expand_icon_container">
+              <div class="expand_icon"></div>
+            </div>
           </li>
           <li>
             <div>
               <a href="dashboard.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
+                  width="30"
+                  height="30"
                   viewBox="0 0 24 24"
                   style="fill: azure"
                 >
@@ -36,18 +38,20 @@
             <p>Home</p>
           </li>
           <li>
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                style="fill: azure"
-              >
-                <path
-                  d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
-                ></path>
-              </svg>
+            <div class="search_icon">
+              <a href="student_search.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 24 24"
+                  style="fill: azure"
+                >
+                  <path
+                    d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
+                  ></path>
+                </svg>
+              </a>
             </div>
             <p>Search Students</p>
           </li>
@@ -56,16 +60,16 @@
               <a href="news.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
+                  width="30"
+                  height="30"
                   viewBox="0 0 24 24"
                   style="fill: azure"
                 >
                   <path
-                    d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"
+                    d="M19.875 3H4.125C2.953 3 2 3.897 2 5v14c0 1.103.953 2 2.125 2h15.75C21.047 21 22 20.103 22 19V5c0-1.103-.953-2-2.125-2zm0 16H4.125c-.057 0-.096-.016-.113-.016-.007 0-.011.002-.012.008L3.988 5.046c.007-.01.052-.046.137-.046h15.75c.079.001.122.028.125.008l.012 13.946c-.007.01-.052.046-.137.046z"
                   ></path>
                   <path
-                    d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"
+                    d="M6 7h6v6H6zm7 8H6v2h12v-2h-4zm1-4h4v2h-4zm0-4h4v2h-4z"
                   ></path>
                 </svg>
               </a>
@@ -75,7 +79,7 @@
           <li>
             <a href="about.html">
               <div class="about_icon">
-                <img width="40px" src="icons/logo.png" alt="" />
+                <img width="30px" src="icons/logo.png" alt="" />
                 <span style="color: azure" class="info">i</span>
               </div>
             </a>
@@ -85,8 +89,8 @@
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
+                width="30"
+                height="30"
                 viewBox="0 0 24 24"
                 style="fill: azure"
               >
@@ -110,17 +114,27 @@
             <ul class="header">
               <li class="title">
                 <img width="60px" src="icons/school-logo.png" alt="" />
-                <p>21 : 37</p>
+                <p></p>
               </li>
 
               <li class="student_switch">
-                <div class="caret_container">
-                  <div class="caret"></div>
-                  <div class="caret"></div>
+                <div class="student_switch_icon_container">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: black"
+                  >
+                    <path
+                      d="M20 2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-6 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM19 15H9v-.25C9 12.901 11.254 11 14 11s5 1.901 5 3.75V15z"
+                    ></path>
+                    <path d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4V8z"></path>
+                  </svg>
                 </div>
                 <div class="student_icon_container">
                   <img
-                    width="30px"
+                    width="25px"
                     src="icons/user-graduate-solid.svg"
                     alt=""
                   />
@@ -129,40 +143,53 @@
               </li>
             </ul>
             <ul class="nav_elements">
-              <li>Good Afternoon</li>
+              <li></li>
               <section>
                 <ul>
-                  <li>+</li>
-                  <li>
-                    <img width="40px" src="Images/mai-founder-first.png" />
+                  <li><a style="color: black" href="signup1.html">+</a></li>
+                  <li class="pic_container">
+                    <img width="30px" src="Images/mai-founder-first.png" />
                   </li>
                   <li>Fekadu Tesfaye</li>
                 </ul>
               </section>
             </ul>
           </figcaption>
+
+          <section class="student_option_sideBar">
+            <section class="ok_btn">
+              <button>OK</button>
+            </section>
+            <ul class="student_options">
+              <h2>Student List</h2>
+              <li class="active">Jonathan Fekadu</li>
+              <li>Linda Fekadu</li>
+              <li>Raphaella Fekadu</li>
+              <li>New Student</li>
+            </ul>
+          </section>
         </figure>
       </section>
       <section id="upcoming_events">
         <div class="title-background">
-          <h1>Events Soon</h1>
+          <h1>Weekly</h1>
           <div class="styler"></div>
         </div>
         <section class="events">
           <article>
-            <h1>Tuesday-10</h1>
+            <h1>Monday</h1>
             <br />
             <p>Final Examination</p>
           </article>
           <article>
-            <h1>Tuesday-10</h1>
+            <h1>Thursday</h1>
             <br />
-            <p>Final Examination</p>
+            <p>Day Off</p>
           </article>
           <article>
-            <h1>Tuesday-10</h1>
+            <h1>Friday</h1>
             <br />
-            <p>Final Examination</p>
+            <p>Feedback</p>
           </article>
         </section>
       </section>
@@ -179,30 +206,34 @@
               <div class="percentage">
                 <span>75%</span>
               </div>
+              <button>View Details</button>
             </article>
             <article class="extra-caricular">
               <h1>Extra Caricular</h1>
               <div class="percentage">
                 <span>50%</span>
               </div>
+              <button>View Details</button>
             </article>
             <article class="behavior">
               <h1>Behavior</h1>
               <div class="percentage">
                 <span>95%</span>
               </div>
+              <button>View Details</button>
             </article>
             <article class="extra-caricular">
               <h1>Average</h1>
               <div class="percentage">
                 <span>80%</span>
               </div>
+              <button>View Details</button>
             </article>
           </div>
         </section>
         <section id="calender">
           <div class="title-background">
-            <h1>Events Soon</h1>
+            <h1>Monthly</h1>
             <div class="styler"></div>
           </div>
           <div class="calendar_container">

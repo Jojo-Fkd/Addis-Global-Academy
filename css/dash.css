@@ -21,34 +21,39 @@ nav ul li {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding-bottom: 0.8rem;
+}
+
+nav ul:first-child li:has(.expand_icon_container) {
+  border-bottom: none;
 }
 
 nav ul li svg,
 nav ul li:has(.expand_icon),
-nav ul li div {
-  transform: translateX(2px);
+.about_icon {
+  transform: translateX(9px);
 }
 
 nav ul li p {
   opacity: 0;
   white-space: nowrap;
   transition: all 0.4s ease;
+  transform: translateX(10px);
 }
 
-nav ul li:has(.expand_icon) {
-  height: 40px;
+.expand_icon_container {
+  height: 30px;
   width: 40px;
   display: grid;
   place-content: center;
   cursor: pointer;
-  border-bottom: none;
+  transform: translateX(-5px);
 }
 
 .expand_icon {
   height: 1px;
-  width: 35px;
+  width: 30px;
   background: var(--FONT-COLOR);
   position: relative;
 }
@@ -64,11 +69,11 @@ nav ul li:has(.expand_icon) {
 }
 
 .expand_icon::before {
-  top: -12px;
+  top: -10px;
 }
 
 .expand_icon::after {
-  bottom: -12px;
+  bottom: -10px;
 }
 
 .about_icon {
@@ -86,9 +91,9 @@ nav ul li:has(.expand_icon) {
   place-content: center;
   bottom: 1px;
   right: 0;
-  height: 20px;
-  width: 20px;
-  font-size: 0.8rem;
+  height: 15px;
+  width: 15px;
+  font-size: 0.6rem;
   background: var(--BG-COLOR);
   border-radius: 50%;
   border: 1px solid var(--FONT-COLOR);
@@ -100,6 +105,72 @@ nav.active {
 
 nav.active ul li p {
   opacity: 1;
+}
+
+/* STUDENT OPTION SIDE BAR */
+
+.student_option_sideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 280px;
+  background: var(--BG-COLOR);
+  border-left: 1px solid var(--BG-COLOR);
+  z-index: -10;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+
+.student_option_sideBar.active {
+  z-index: 100000;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ok_btn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.ok_btn button {
+  background: white;
+  color: var(--BG-COLOR);
+  height: 30px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  outline-color: none;
+  font-size: 1rem;
+}
+
+.student_options {
+  margin-top: 1rem;
+  display: flex;
+  color: var(--FONT-COLOR);
+  flex-direction: column;
+  font-size: 1.1rem;
+}
+
+.student_options h2 {
+  font-weight: light;
+  padding: 1rem;
+}
+
+.student_options li {
+  border-bottom: 1px solid;
+  padding: 1rem 0;
+  padding-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+.student_options li:hover,
+.student_options li.active {
+  background: white;
+  color: var(--BG-COLOR);
 }
 
 /* DASH BOARD CONTENT */
@@ -125,7 +196,7 @@ nav.active ul li p {
 
 #profile .header,
 #profile .nav_elements {
-  height: 13vh;
+  min-height: 13vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -147,12 +218,11 @@ nav.active ul li p {
 
 .student_switch {
   display: flex;
-  gap: 0.2rem;
   align-items: flex-end;
   width: 260px;
 }
 
-.student_switch .caret_container {
+.student_switch .student_switch_icon_container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -161,22 +231,8 @@ nav.active ul li p {
   transition: all 0.3s ease;
 }
 
-.student_switch .caret {
-  height: 10px;
-  width: 1px;
-  background: black;
-  border-radius: 5px;
-}
-
-.student_switch .caret:first-child {
-  transform: rotate(-40deg);
-}
-
-.student_switch .caret:last-child {
-  transform: rotate(40deg);
-}
-
-.student_icon_container {
+.student_icon_container,
+.pic_container {
   width: 40px;
   display: grid;
   place-content: center;
@@ -184,8 +240,8 @@ nav.active ul li p {
 
 .student_switch p {
   font-weight: lighter;
-  font-size: 1.2rem;
-  margin-left: 0.4rem;
+  font-size: 1rem;
+  margin-left: 0.2rem;
 }
 
 /* LOWER PORTION OF DASHBOARD HEADER */
@@ -197,21 +253,18 @@ nav.active ul li p {
 
 .nav_elements section ul {
   display: flex;
-  gap: 0.2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   align-items: center;
   width: 260px;
 }
 
 .nav_elements section ul li:first-child {
   width: 19px;
-  display: grid;
-  place-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .nav_elements section ul li:last-child {
-  margin-left: 0.4rem;
+  margin-left: 0.2rem;
 }
 
 /* DASHBOARD SIDE BAR AND NAVBAR RESPONSIVE DESIGN */
@@ -325,6 +378,14 @@ nav.active ul li p {
 
 /* UPCOMING EVENT */
 
+.title-background h1 {
+  font-size: 1.7rem;
+}
+
+.title-background .styler {
+  width: 40px;
+}
+
 #upcoming_events {
   padding-left: 6rem;
 }
@@ -340,21 +401,24 @@ nav.active ul li p {
 #upcoming_events .events article {
   width: 280px;
   height: 160px;
-  background: var(--BG-COLOR);
-  color: var(--FONT-COLOR);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  color: black;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 #upcoming_events .events article h1 {
-  font-size: 2.4rem;
+  font-size: 1.3rem;
   font-weight: lighter;
+  opacity: 0.7;
 }
 
 #upcoming_events .events article p {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  color: var(--BG-COLOR);
+  font-weight: lighter;
 }
 
 /* STATUS-CALENDAR CONTENT */
@@ -391,22 +455,22 @@ nav.active ul li p {
 #status article {
   width: 300px;
   height: 320px;
-  background: var(--BG-COLOR);
-  color: var(--MAIN-COLOR);
   text-align: center;
-  border-radius: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 #status article h1 {
   flex-basis: calc(100% / 6);
   display: grid;
   place-content: center;
-  color: var(--FONT-COLOR);
-  font-size: 1.8rem;
+  color: black;
+  font-size: 1.3rem;
+  opacity: 0.7;
   font-weight: lighter;
 }
 
@@ -417,21 +481,29 @@ nav.active ul li p {
 }
 
 .percentage span {
-  border: 10px solid white;
+  border: 10px solid rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   width: 150px;
   height: 150px;
   display: grid;
   place-content: center;
-  color: var(--FONT-COLOR);
+  color: var(--BG-COLOR);
   font-size: 1.5rem;
+}
+
+#status article button {
+  background: var(--BG-COLOR);
+  border: 1px solid;
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 5px;
 }
 
 /* CALENDAR */
 
 .calendar_container table {
-  border: 1px solid var(--BG-COLOR);
-  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
   padding: 1rem;
 }
 
@@ -442,7 +514,7 @@ nav.active ul li p {
 }
 
 .calendar_container table tr td {
-  border: 1px solid var(--BG-COLOR);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 1.3rem;
   height: 50px;
   width: 50px;
@@ -519,7 +591,7 @@ footer {
 /* DASHBOARD BLUR */
 
 .dashboard_blur {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -532,5 +604,10 @@ footer {
 
 .dashboard_blur.blur {
   z-index: 100;
+  opacity: 1;
+}
+
+.dashboard_blur.blur2 {
+  z-index: 10000;
   opacity: 1;
 }
