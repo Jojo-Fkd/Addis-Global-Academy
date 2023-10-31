@@ -21,6 +21,7 @@ const dashboardClock = document.querySelector(".title p");
 const greetingContainer = document.querySelector(
   ".nav_elements li:first-child"
 );
+
 let greeting;
 
 setInterval(() => {
@@ -28,9 +29,9 @@ setInterval(() => {
 
   let hours = date.getHours();
 
-  if (hours < 12) {
+  if (hours === 0 && hours < 6) {
     greeting = "Morning";
-  } else if (hours > 12 || hours < 17) {
+  } else if (hours >= 6 && hours < 12) {
     greeting = "Afternoon";
   } else {
     greeting = "Evening";

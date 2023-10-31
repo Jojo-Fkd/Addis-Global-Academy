@@ -1,26 +1,6 @@
-/* FONT FAMILY */
-
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
-
-/* VARIABLES */
-
-:root {
-  --BG-COLOR: black;
-  --MAIN-COLOR: white;
-}
-
-/* RESET */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Merriweather", sans-serif;
-}
-
 body {
   height: 100vh;
-  background-image: url(main2.png);
+  background-image: url(main.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -76,12 +56,20 @@ body {
   margin-top: 1rem;
 }
 
+.signup_body p a:any-link {
+  color: var(--BG-COLOR);
+}
+
+.signup_body p a:hover {
+  text-decoration: underline;
+}
+
 .signup_body button {
   width: 140px;
   height: 50px;
   font-size: 1rem;
   background: var(--BG-COLOR);
-  color: var(--MAIN-COLOR);
+  color: var(--FONT-COLOR);
   border: 1px solid;
   cursor: pointer;
   margin-top: 1rem;
@@ -92,7 +80,7 @@ body {
 }
 
 .signup_body button:hover {
-  background: var(--MAIN-COLOR);
+  background: var(--FONT-COLOR);
   color: var(--BG-COLOR);
   border: 0.5px solid #333;
 }

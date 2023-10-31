@@ -51,32 +51,6 @@
   color: var(--BG-COLOR);
 }
 
-.navigation {
-  max-width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.navigation h2 {
-  font-weight: lighter;
-  font-size: 1.9rem;
-}
-
-.nav_icon {
-  height: 40px;
-  width: 40px;
-  background: black;
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-  cursor: pointer;
-}
-
-.nav_icon img {
-  width: 25px;
-}
-
 @media screen and (max-width: 435px) {
   .filter ul li {
     height: 50px;
@@ -122,8 +96,9 @@
 
 .news_content {
   width: 100%;
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .news_content article {
@@ -176,37 +151,6 @@
   width: 20px;
 }
 
-.interaction {
-  padding-top: 1.5rem;
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.interaction figure {
-  display: flex;
-  gap: 0.3rem;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.interaction button {
-  background: var(--FONT-COLOR);
-  height: 45px;
-  width: 125px;
-  border: 1px solid white;
-  border-radius: 5px;
-  outline: none;
-  outline-color: none;
-  cursor: pointer;
-  transition: all ease-in 0.3s;
-}
-
-.interaction button a:any-link {
-  font-size: 1.3rem;
-  color: var(--BG-COLOR);
-}
-
 /* NEWS SECTION RESPONSIVE DESIGN */
 
 @media screen and (max-width: 615px) {
@@ -236,36 +180,46 @@
 
 #calendar {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   margin-left: 1rem;
 }
 
-#calendar table {
-  border: 1px solid #444;
+.event_calendar_display {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.event_calendar_display table {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
   border-radius: 5px;
   padding: 1rem;
 }
 
-#calendar table tr {
+.event_calendar_display table tr {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
 }
-
-#calendar table tr.month td {
+.event_calendar_display table tr.month td {
   height: 40px;
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  border-radius: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0;
   display: flex;
   align-items: center;
   padding-left: 1rem;
-  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
-#calendar table tr:not(.month) td {
-  border: 1px solid black;
+.event_calendar_display table tr.month td h1 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.event_calendar_display tr:not(.month) td {
+  border: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 1.3rem;
   height: 50px;
   width: 50px;
@@ -274,15 +228,14 @@
   place-content: center;
 }
 
-#calendar table tr td.set {
-  background: black;
-  color: white;
+.event_calendar_display table tr td.set {
+  border: none;
+  background: var(--BG-COLOR);
+  color: var(--FONT-COLOR);
 }
 
 .event {
-  background: var(--BG-COLOR);
-  color: var(--FONT-COLOR);
-  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
   border-radius: 10px;
   padding: 1rem;
   margin-right: 1rem;
@@ -291,8 +244,12 @@
 
 .event h1 {
   font-size: 1.2rem;
+  color: black;
   font-weight: lighter;
   padding-top: 0.7rem;
+  padding-left: 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .event ul {
@@ -312,6 +269,7 @@
 
 .event_info {
   width: 50%;
+  color: var(--BG-COLOR);
 }
 
 @media screen and (max-width: 750px) {

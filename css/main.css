@@ -6,7 +6,8 @@
 
 :root {
   --BG-COLOR: rgb(64, 128, 255);
-  --FONT-COLOR: azure;
+  --BG-COLOR: #0b388b;
+  --FONT-COLOR: white;
 }
 
 /*RESET*/
@@ -458,6 +459,9 @@ footer p {
 
 #contact_info article:last-child address {
   font-weight: lighter;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 #sub_footer {
