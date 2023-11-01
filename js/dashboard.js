@@ -29,11 +29,11 @@ setInterval(() => {
 
   let hours = date.getHours();
 
-  if (hours >= 0 || hours < 6) {
+  if (hours >= 0 && hours < 12) {
     greeting = "Morning";
-  } else if (hours >= 6 || hours < 12) {
+  } else if (hours >= 12 && hours < 18) {
     greeting = "Afternoon";
-  } else if (hours >= 12 || hours > 0) {
+  } else if (hours >= 18 && hours > 0) {
     greeting = "Evening";
   }
 
@@ -61,3 +61,14 @@ studentSwitchIcon.onclick = () => {
     sideBar.style.zIndex = "1000";
   };
 };
+
+/* STUDENT EVALUATION DETAILS */
+
+const detailBtn = document.querySelectorAll(".evaluation_cards article button");
+const detailPopUp = document.querySelector(".evaluation_details");
+
+detailBtn.forEach((btn) => {
+  btn.onclick = () => {
+    detailPopUp.classList.add("detail");
+  };
+});
