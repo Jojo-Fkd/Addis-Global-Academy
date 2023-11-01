@@ -601,7 +601,7 @@ footer {
   left: 0;
   height: 100%;
   width: 100%;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(4px);
   z-index: -1;
   opacity: 0;
   transition: all 0.5s ease;
