@@ -29,11 +29,11 @@ setInterval(() => {
 
   let hours = date.getHours();
 
-  if (hours === 0 && hours < 6) {
+  if (hours >= 0 || hours < 6) {
     greeting = "Morning";
-  } else if (hours >= 6 && hours < 12) {
+  } else if (hours >= 6 || hours < 12) {
     greeting = "Afternoon";
-  } else {
+  } else if (hours >= 12 || hours > 0) {
     greeting = "Evening";
   }
 
