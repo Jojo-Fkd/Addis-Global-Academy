@@ -20,7 +20,7 @@
             </div>
           </li>
           <li>
-            <div>
+            <div class="side_icon">
               <a href="dashboard.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -37,9 +37,8 @@
             </div>
             <p>Home</p>
           </li>
-
           <li>
-            <div>
+            <div class="side_icon">
               <a href="news.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -60,111 +59,165 @@
             <p>News & Events</p>
           </li>
           <li>
-            <a href="about.html">
-              <div class="about_icon">
-                <img width="30px" src="icons/logo.png" alt="" />
-                <span style="color: var(--FONT-COLOR)" class="info">i</span>
-              </div>
-            </a>
+            <div class="side_icon">
+              <a href="about.html">
+                <div class="about_icon">
+                  <img width="30px" src="icons/logo.png" alt="" />
+                  <span style="color: var(--FONT-COLOR)" class="info">i</span>
+                </div>
+              </a>
+            </div>
             <p>About AGA</p>
           </li>
         </ul>
       </nav>
     </header>
-    <main id="dashboard">
-      <section id="profile">
-        <figure>
-          <figcaption>
-            <ul class="header">
-              <li class="title">
-                <img width="60px" src="icons/school-logo.png" alt="" />
-                <p></p>
-              </li>
 
-              <li class="student_switch">
-                <div class="student_switch_icon_container">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    style="fill: black"
-                  >
-                    <path
-                      d="M20 2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-6 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM19 15H9v-.25C9 12.901 11.254 11 14 11s5 1.901 5 3.75V15z"
-                    ></path>
-                    <path d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4V8z"></path>
-                  </svg>
-                </div>
-                <div class="student_icon_container">
-                  <img
-                    width="25px"
-                    src="icons/user-graduate-solid.svg"
-                    alt=""
-                  />
-                </div>
-                <p>Jonathan Fekadu</p>
-              </li>
-            </ul>
-            <ul class="nav_elements">
-              <li></li>
-              <section>
-                <ul>
-                  <li><a style="color: black" href="signup1.html">+</a></li>
-                  <li class="pic_container">
-                    <img width="30px" src="Images/mai-founder-first.png" />
-                  </li>
-                  <li>Fekadu Tesfaye</li>
-                </ul>
-              </section>
-            </ul>
-          </figcaption>
+    <section id="profile">
+      <figure>
+        <figcaption>
+          <ul class="header">
+            <li class="title">
+              <img width="60px" src="icons/school-logo.png" alt="" />
+              <p></p>
+            </li>
 
-          <section class="student_option_sideBar">
-            <section class="ok_btn">
-              <button>OK</button>
+            <li class="student_switch">
+              <div class="student_switch_icon_container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: black"
+                >
+                  <path
+                    d="M20 2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm-6 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM19 15H9v-.25C9 12.901 11.254 11 14 11s5 1.901 5 3.75V15z"
+                  ></path>
+                  <path d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4V8z"></path>
+                </svg>
+              </div>
+              <div class="student_icon_container">
+                <img width="25px" src="icons/user-graduate-solid.svg" alt="" />
+              </div>
+              <p>Jonathan Fekadu</p>
+            </li>
+          </ul>
+          <ul class="nav_elements">
+            <li></li>
+            <section>
+              <ul>
+                <li><a style="color: black" href="signup1.html">+</a></li>
+                <li class="pic_container">
+                  <img width="30px" src="Images/mai-founder-first.png" />
+                </li>
+                <li>Fekadu Tesfaye</li>
+              </ul>
             </section>
-            <ul class="student_options">
-              <h2>Student List</h2>
-              <li class="active">Jonathan Fekadu</li>
-              <li>Linda Fekadu</li>
-              <li>Raphaella Fekadu</li>
-              <li>New Student</li>
-            </ul>
-          </section>
-        </figure>
-      </section>
-      <section id="upcoming_events">
-        <div class="title-background">
-          <h1>Weekly</h1>
-          <div class="styler"></div>
-        </div>
-        <section class="events">
-          <article>
-            <h1>Monday</h1>
-            <br />
-            <p>Final Examination</p>
-          </article>
-          <article>
-            <h1>Thursday</h1>
-            <br />
-            <p>Day Off</p>
-          </article>
-          <article>
-            <h1>Friday</h1>
-            <br />
-            <p>Feedback</p>
-          </article>
-        </section>
-      </section>
+          </ul>
+        </figcaption>
 
-      <section id="status-calender">
-        <section id="status">
+        <section class="student_option_sideBar">
+          <section class="ok_btn">
+            <button>OK</button>
+          </section>
+          <ul class="student_options">
+            <h2>Student List</h2>
+            <li class="active">Jonathan Fekadu</li>
+            <li>Linda Fekadu</li>
+            <li>Raphaella Fekadu</li>
+            <li>New Student</li>
+          </ul>
+        </section>
+      </figure>
+    </section>
+    <main id="dashboard">
+      <section id="dashboard_inner">
+        <section id="upcoming_events">
+          <div class="title-background">
+            <h1>Weekly</h1>
+            <div class="styler"></div>
+          </div>
+          <section class="weekly">
+            <article>
+              <h1>Monday</h1>
+              <br />
+              <p>Final Examination</p>
+            </article>
+            <article>
+              <h1>Thursday</h1>
+              <br />
+              <p>Day Off</p>
+            </article>
+            <article>
+              <h1>Friday</h1>
+              <br />
+              <p>Feedback</p>
+            </article>
+          </section>
+          <section id="monthly">
+            <div class="title-background">
+              <h1>Monthly</h1>
+              <div class="styler"></div>
+            </div>
+            <div class="calendar_container">
+              <table>
+                <tr>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td class="set">11</td>
+                  <td>12</td>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                  <td class="set">20</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>29</td>
+                  <td>30</td>
+                </tr>
+                <tr>
+                  <td>31</td>
+                </tr>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section id="evaluation">
           <div class="title-background">
             <h1>Student Evaluation</h1>
             <div class="styler"></div>
           </div>
-          <div class="status_cards">
+          <div class="evaluation_cards">
             <article class="academics">
               <h1>Academics</h1>
               <div class="percentage">
@@ -193,61 +246,6 @@
               </div>
               <button>View Details</button>
             </article>
-          </div>
-        </section>
-        <section id="calender">
-          <div class="title-background">
-            <h1>Monthly</h1>
-            <div class="styler"></div>
-          </div>
-          <div class="calendar_container">
-            <table>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-              </tr>
-              <tr>
-                <td class="set">11</td>
-                <td>12</td>
-                <td>13</td>
-                <td>14</td>
-                <td>15</td>
-              </tr>
-              <tr>
-                <td>16</td>
-                <td>17</td>
-                <td>18</td>
-                <td>19</td>
-                <td class="set">20</td>
-              </tr>
-              <tr>
-                <td>21</td>
-                <td>22</td>
-                <td>23</td>
-                <td>24</td>
-                <td>25</td>
-              </tr>
-              <tr>
-                <td>26</td>
-                <td>27</td>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-              </tr>
-              <tr>
-                <td>31</td>
-              </tr>
-            </table>
           </div>
         </section>
       </section>

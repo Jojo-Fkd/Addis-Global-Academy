@@ -39,48 +39,6 @@
   transition: all 0.3s ease;
 }
 
-#school-divisions figure a:any-link {
-  width: 100px;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
-  color: var(--FONT-COLOR);
-  font-size: 1.2rem;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-}
-
-#school-divisions figure a:any-link:hover {
-  transform: translateX(-5px);
-}
-
-#school-divisions figure a:any-link p {
-  transform: translateY(6px);
-}
-
-#school-divisions figure a:any-link .proceed_container {
-  height: 1px;
-  width: 20px;
-  background: var(--FONT-COLOR);
-  transform: rotate(40deg);
-  display: block;
-  position: relative;
-}
-
-#school-divisions figure a:any-link .proceed_container::before {
-  position: absolute;
-  content: "";
-  height: inherit;
-  width: inherit;
-  background: inherit;
-  transform: translate(8px, 10px) rotate(-80deg);
-}
-
 #school-divisions figure figcaption {
   display: flex;
   gap: 1rem;
@@ -103,7 +61,27 @@
   text-shadow: 5px 5px 10px var(--FONT-COLOR);
 }
 
-#school-divisions figure:hover .bg,
+#school-divisions figure a:any-link {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  border-radius: 50%;
+  background: white;
+}
+
+#school-divisions figure a:any-link img {
+  width: 30px;
+  height: 14px;
+  z-index: 1;
+}
+
+#school-divisions figure a:any-link #school-divisions figure:hover .bg,
 #school-divisions figure:hover a:any-link,
 #school-divisions figure:hover figcaption {
   opacity: 1;

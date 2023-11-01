@@ -3,8 +3,8 @@
 nav {
   background: var(--BG-COLOR);
   width: 80px;
-  height: 100vh;
   padding: 1rem;
+  height: 100vh;
   display: unset;
   transition: all 0.4s ease;
   overflow: hidden;
@@ -12,27 +12,36 @@ nav {
 }
 
 nav ul {
-  display: flex;
-  gap: 0.8rem;
-  flex-direction: column;
+  display: grid;
+}
+
+nav ul .side_icon {
+  height: 60px;
+  width: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 nav ul li {
+  height: 60px;
   display: flex;
-  gap: 0.5rem;
   align-items: center;
+}
+
+nav.active ul .side_icon {
+  border-bottom: none;
+}
+
+nav.active ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 0.8rem;
 }
 
 nav ul:first-child li:has(.expand_icon_container) {
   border-bottom: none;
 }
 
-nav ul li svg,
-nav ul li:has(.expand_icon),
-.about_icon {
-  transform: translateX(9px);
+nav ul li div {
+  display: grid;
+  place-content: center;
 }
 
 nav ul li p {
@@ -48,7 +57,6 @@ nav ul li p {
   display: grid;
   place-content: center;
   cursor: pointer;
-  transform: translateX(-5px);
 }
 
 .expand_icon {
@@ -353,8 +361,12 @@ nav.active ul li p {
 }
 
 @media screen and (max-width: 378px) {
+  .title {
+    gap: 0.2rem;
+  }
+
   .title p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .nav_elements {
@@ -368,13 +380,29 @@ nav.active ul li p {
   }
 }
 
-@media screen and (max-width: 343px) {
-  #profile figure {
-    padding-left: 5.3rem;
+@media screen and (max-width: 350px) {
+  nav {
+    width: 60px;
+    padding: 0.6rem;
   }
 }
 
-/* UPCOMING EVENT */
+/* DASHBOARD CONTENT */
+
+#dashboard {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 100vw;
+  padding-bottom: 4rem;
+  padding-left: 80px;
+}
+
+#dashboard_inner {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* UPCOMING EVENTS */
 
 .title-background h1 {
   font-size: 1.7rem;
@@ -384,19 +412,17 @@ nav.active ul li p {
   width: 40px;
 }
 
-#upcoming_events {
-  padding-left: 6rem;
-}
+/* WEEKLY EVENTS */
 
-#upcoming_events .events {
+.weekly {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
 
-#upcoming_events .events article {
+.weekly article {
   width: 280px;
   height: 160px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
@@ -407,97 +433,24 @@ nav.active ul li p {
   border-radius: 20px;
 }
 
-#upcoming_events .events article h1 {
+.weekly article h1 {
   font-size: 1.3rem;
   font-weight: lighter;
   opacity: 0.7;
 }
 
-#upcoming_events .events article p {
+.weekly article p {
   font-size: 1.4rem;
   color: var(--BG-COLOR);
   font-weight: lighter;
 }
 
-/* STATUS-CALENDAR CONTENT */
-
-#status-calender {
-  max-width: 100vw;
-  padding-left: 6rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-bottom: 2rem;
-}
-
-#status {
-  max-width: 60vw;
-}
-
-#events {
-  max-width: 40vw;
-}
-
-.status_cards {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+/* MONTHLY EVENTS */
 
 .calendar_container {
   display: grid;
   place-content: center;
 }
-
-#status article {
-  width: 300px;
-  height: 320px;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-#status article h1 {
-  flex-basis: calc(100% / 6);
-  display: grid;
-  place-content: center;
-  color: black;
-  font-size: 1.3rem;
-  opacity: 0.7;
-  font-weight: lighter;
-}
-
-.percentage {
-  flex-grow: 1;
-  display: grid;
-  place-content: center;
-}
-
-.percentage span {
-  border: 10px solid rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  display: grid;
-  place-content: center;
-  color: var(--BG-COLOR);
-  font-size: 1.5rem;
-}
-
-#status article button {
-  background: var(--BG-COLOR);
-  border: 1px solid;
-  color: white;
-  padding: 0.5rem 0.9rem;
-  border-radius: 5px;
-}
-
-/* CALENDAR */
 
 .calendar_container table {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
@@ -526,36 +479,180 @@ nav.active ul li p {
   color: var(--FONT-COLOR);
 }
 
+/* STUDENT EVALUATION CONTENT */
+
+.evaluation_cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.evaluation_cards article {
+  width: 300px;
+  height: 320px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.evaluation_cards h1 {
+  flex-basis: calc(100% / 6);
+  display: grid;
+  place-content: center;
+  color: black;
+  font-size: 1.3rem;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+
+.percentage {
+  flex-grow: 1;
+  display: grid;
+  place-content: center;
+}
+
+.percentage span {
+  border: 10px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: grid;
+  place-content: center;
+  color: var(--BG-COLOR);
+  font-size: 1.5rem;
+}
+
+#evaluation article button {
+  background: var(--BG-COLOR);
+  border: 1px solid;
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 5px;
+}
+
 /* DASHBOARD CONTENT STYLES */
 
-@media screen and (max-width: 1030px) {
-  #status,
-  #events {
-    max-width: 100vw;
+@media screen and (max-width: 775px) {
+  /* WEEKLY EVENTS */
+
+  .title-background h1 {
+    font-size: 1.5rem;
+  }
+
+  .title-background .styler {
+    width: 30px;
+  }
+
+  .weekly article {
+    width: 260px;
+    height: 140px;
+  }
+
+  .weekly article h1 {
+    font-size: 1.1rem;
+  }
+
+  .weekly article p {
+    font-size: 1.2rem;
+  }
+
+  /* MONTHLY EVENTS */
+
+  .calendar_container table {
+    transform: scale(0.9);
+  }
+
+  /* STUDENT EVALUATION CONTENT */
+
+  .evaluation_cards article {
+    width: 270px;
+    height: 310px;
+  }
+
+  .percentage span {
+    width: 130px;
+    height: 130px;
+    font-size: 1.3rem;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .calendar_container table {
-    padding: 0.6rem;
+@media screen and (max-width: 690px) {
+  #dashboard_inner {
+    flex-direction: column;
   }
 
-  .calendar_container table tr {
-    display: flex;
-    gap: 0.4rem;
-    margin-bottom: 0.4rem;
+  .weekly {
+    row-gap: 1.4rem;
   }
+}
+
+@media screen and (max-width: 400px) {
+  /* WEEKLY EVENTS */
+
+  .title-background h1 {
+    font-size: 1.3rem;
+  }
+
+  .title-background .styler {
+    width: 25px;
+  }
+
+  .weekly article {
+    width: 240px;
+    height: 130px;
+  }
+
+  .weekly article h1 {
+    font-size: 1.1rem;
+  }
+
+  .weekly article p {
+    font-size: 1.1rem;
+  }
+
+  /* MONTHLY EVENTS */
 
   .calendar_container table tr td {
+    font-size: 1rem;
+    height: 40px;
+    width: 40px;
+  }
+
+  /* STUDENT EVALUATION CONTENT */
+
+  .evaluation_cards article {
+    width: 230px;
+    height: 300px;
+  }
+
+  .percentage span {
+    width: 120px;
+    height: 120px;
     font-size: 1.1rem;
-    height: 45px;
-    width: 45px;
+  }
+
+  #evaluation article button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
   }
 }
 
-@media screen and (max-width: 415px) {
-  #status article {
-    width: 260px;
+@media screen and (max-width: 350px) {
+  #dashboard {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .weekly article {
+    width: 220px;
+    height: 125px;
   }
 }
 
