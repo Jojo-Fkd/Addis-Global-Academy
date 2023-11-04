@@ -9,33 +9,34 @@
     <title>Sign-In</title>
   </head>
   <body>
-    <figure>
-      <a href="index.html">
-        <img src="icons/school-logo.png" alt="image-logo" />
-      </a>
-    </figure>
-    <section class="signup_body">
+    <section class="registration">
       <h1>Sign-In</h1>
-      <form>
-        <!--THE REASON I USED THIS MUCH DIV IS BECAUSE THE CODE WOULD LOOK MESSY IF YOU HAVE A BETTER WAY OF CLEANING DO IT -->
-        <div class="full_name">
-          <label for="full-name">Full-name</label>
-          <br />
-          <input type="text" required />
-        </div>
-        <div class="email">
-          <label for="email">Email</label>
-          <br />
-          <input type="email" required />
-        </div>
-        <div class="password">
-          <label for="password">Password</label>
-          <br />
-          <input type="password" required />
-        </div>
+      <form id="form">
+        <label for="Name">
+          <span class="input-label">Full-name</span>
+          <input type="text" required name="Name" id="Name" />
+        </label>
+        <label class="Email">
+          <span class="input-label">Email</span>
+          <input type="email" required name="Email" id="Email" />
+        </label>
+        <label for="Password">
+          <span class="input-label">Password</span>
+          <input type="password" required name="Password" id="Password" />
+        </label>
         <p>No Account? <a href="signup1.html">Sign Up</a></p>
-        <a href="signup2.html"><button type="submit">Sign In</button></a>
+        <button type="submit" id="button" onclick="send()">Sign In</button>
       </form>
     </section>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("GplV_Bcw5q5bF487Q");
+    </script>
+    <script src="js/signin.js"></script>
   </body>
 </html>

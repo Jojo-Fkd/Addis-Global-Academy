@@ -9,38 +9,39 @@
     <title>Sign-up</title>
   </head>
   <body>
-    <figure>
-      <a href="index.html">
-        <img src="icons/school-logo.png" alt="image-logo" />
-      </a>
-    </figure>
-    <section class="signup_body">
+    <section class="registration">
       <h1>Sign-up</h1>
-      <form action="index.html">
-        <div class="student_name">
-          <label for="Student-Name">Student Name</label>
-          <br />
-          <input type="text" required />
-        </div>
-        <div class="grade">
-          <label for="text">Grade</label>
-          <br />
-          <input type="text" required />
-        </div>
-        <div class="section">
-          <label for="section">Section</label>
-          <br />
-          <input type="text" required />
-        </div>
-        <div class="phone_number">
-          <label for="phone number(optional)">Phone Number(optional)</label>
-          <br />
-          <div class="phone-position">
-            <span class="eth-no">+251</span><input type="number" required />
-          </div>
-        </div>
-        <a href="index.html"><button type="submit">Finish</button></a>
+      <form
+        id="student-form"
+        action="https://sheetdb.io/api/v1/20486228p4xid"
+        method="Post"
+      >
+        <label for="Student_name">
+          <span class="input-label">Student Name</span>
+          <input type="text" required name="data[Name]" id="Student_name" />
+        </label>
+        <label for="Grade">
+          <span class="input-label">Grade</span>
+          <input type="text" required name="data[Grade]" id="Grade" />
+        </label>
+        <label for="Phone_number">
+          <span class="input-label">Phone Number(optional)</span>
+          <div><span>+251</span><input type="number" name="data[Phone]" /></div>
+        </label>
+        <a href="signin.html"><button type="submit">Next</button></a>
       </form>
     </section>
+    <script>
+      const form = document.getElementById("student-form");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+        });
+        location.href = "signin.html";
+      });
+    </script>
   </body>
 </html>
