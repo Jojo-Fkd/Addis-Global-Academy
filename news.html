@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/news.css" />
     <link rel="icon" href="icons/school-logo.png" />
     <script defer src="js/script.js"></script>
+    <script defer src="js/news_events.js"></script>
     <title>Addis Global Academy</title>
   </head>
   <body>
@@ -49,23 +50,15 @@
         <h1>News</h1>
         <div class="styler"></div>
       </div>
-      <!-- NEWS FILTER -->
-      <section class="filter">
-        <ul>
-          <li>New</li>
-          <li class="active">Old</li>
-          <li>Random</li>
-        </ul>
-      </section>
 
       <!-- NEWS CONTENT -->
 
       <section class="news_content">
-        <div class="nav_icon">
+        <div class="nav_icon" onclick="previous()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="70"
-            height="70"
+            width="40"
+            height="40"
             viewBox="0 0 24 24"
             style="fill: var(--BG-COLOR)"
           >
@@ -79,18 +72,11 @@
             <img width="60px" src="icons/logo.png" />
           </h3>
           <figure class="news_post">
-            <img src="Images/main-img.jpg" />
+            <img src="" />
             <figcaption class="news_information">
               <h2>Summer Camp</h2>
               <ul>
-                <li><span>*</span>Coding</li>
-                <li><span>*</span>Astronomy</li>
-                <li><span>*</span>Robotics</li>
-                <li><span>*</span>Spelling Bee</li>
-                <li><span>*</span>Sport Activities</li>
-                <li><span>*</span>Soft Skills</li>
-                <li><span>*</span>Arts And Crafts</li>
-                <li><span>*</span>Educational Games</li>
+                <p class="main_news"></p>
                 <li class="call">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -104,17 +90,34 @@
                     ></path>
                     <path d="M13 8c2.1 0 3 .9 3 3h2c0-3.22-1.78-5-5-5z"></path>
                   </svg>
-                  0979795154 / 0979795458
+                  <span>0979795154 / 0979795458</span>
+                </li>
+                <li class="date">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: var(--FONT-COLOR)"
+                  >
+                    <path
+                      d="M19.875 3H4.125C2.953 3 2 3.897 2 5v14c0 1.103.953 2 2.125 2h15.75C21.047 21 22 20.103 22 19V5c0-1.103-.953-2-2.125-2zm0 16H4.125c-.057 0-.096-.016-.113-.016-.007 0-.011.002-.012.008L3.988 5.046c.007-.01.052-.046.137-.046h15.75c.079.001.122.028.125.008l.012 13.946c-.007.01-.052.046-.137.046z"
+                    ></path>
+                    <path
+                      d="M6 7h6v6H6zm7 8H6v2h12v-2h-4zm1-4h4v2h-4zm0-4h4v2h-4z"
+                    ></path>
+                  </svg>
+                  <span>21/02/23</span>
                 </li>
               </ul>
             </figcaption>
           </figure>
         </article>
-        <div class="nav_icon">
+        <div class="nav_icon" onclick="next()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="70"
-            height="70"
+            width="40"
+            height="40"
             viewBox="0 0 24 24"
             style="fill: var(--BG-COLOR)"
           >
@@ -236,7 +239,6 @@
         </div>
       </section>
     </section>
-
     <!-- FOOTER -->
 
     <footer>

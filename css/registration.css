@@ -22,12 +22,13 @@ h1 img {
 }
 
 .registration form {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
-.registration label {
+.registration form label {
   display: flex;
   gap: 0.2rem;
   flex-direction: column;
@@ -42,7 +43,7 @@ h1 img {
 input {
   padding-left: 0.5rem;
   height: 40px;
-  width: 300px;
+  width: 100%;
   font-size: 0.9rem;
   border: 1px solid rgba(0, 0, 0, 0.7);
   border-radius: 2px;
