@@ -1,55 +1,25 @@
-/* NEWS */
-
-/* fetch(
-  "https://sheet.best/api/sheets/c6d365e1-7d7e-4977-bf99-a842bea5e02c"
-).then((response) => {
-  response.json().then((data) => {
-    data.forEach((obj) => {
-      let newPost = {
-        image: obj.Image,
-        news: obj.News,
-        time: obj.Timestamp,
+fetch("https://sheet.best/api/sheets/c6d365e1-7d7e-4977-bf99-a842bea5e02c")
+  .then((response) => response.json())
+  .then((data) => {
+    let newsArray = [];
+    data.forEach((item) => {
+      let newsItem = {
+        image: item.Image,
+        title: item.Title,
+        news: item.News,
+        date: item.Date,
+        phoneNumber: item.Phone,
       };
-      newsArray.push(newPost);
+      newsArray.push(newsItem);
     });
+    createNewsArticles(newsArray);
   });
-});
- */
 
-let newsArray = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=60&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHN8ZW58MHx8MHx8fDA%3D",
-    title: "ICT",
-    news: "Student are leaning to compute",
-    date: "21/02/23",
-    phoneNumber: "0978080244",
-  },
-
-  {
-    image:
-      "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=60&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3R1ZGVudHN8ZW58MHx8MHx8fDA%3D",
-    title: "English",
-    news: "Student are learning to communicate",
-    date: "22/02/23",
-    phoneNumber: "096446350",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=60&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHN8ZW58MHx8MHx8fDA%3D",
-    title: "Coding Competition",
-    news: "We are organizing a coding competetion",
-    date: "23/02/23",
-    phoneNumber: "0912600015",
-  },
-];
-
-let newsArticle;
-
-for (let i = 0; i <= newsArray.length - 1; i++) {
-  let newsPost = newsArray[i];
-  const article = document.createElement("article");
-  article.innerHTML = `
+const createNewsArticles = (newsArray) => {
+  for (let i = 0; i <= newsArray.length - 1; i++) {
+    let newsPost = newsArray[i];
+    const article = document.createElement("article");
+    article.innerHTML = `
           <h3>
             <img width="60px" src="icons/logo.png" />
           </h3>
@@ -95,62 +65,65 @@ for (let i = 0; i <= newsArray.length - 1; i++) {
             </figcaption>
           </figure>
   `;
-  if (i === newsArray.length - 1) {
-    document
-      .querySelector(".news_content .article_container")
-      .appendChild(article);
-    let latestTag = document.createElement("div");
-    let h3 = document.querySelector("h3");
-    latestTag.innerText = "Latest";
-    h3.appendChild(latestTag);
-  } else {
-    document
-      .querySelector(".sub_news_content .article_container")
-      .appendChild(article);
+    if (i === newsArray.length - 1) {
+      document
+        .querySelector(".news_content .article_container")
+        .appendChild(article);
+      let latestTag = document.createElement("div");
+      let h3 = document.querySelector("h3");
+      latestTag.innerText = "Latest";
+      h3.appendChild(latestTag);
+    } else {
+      document
+        .querySelector(".sub_news_content .article_container")
+        .appendChild(article);
+    }
   }
-}
+};
 
 /* EVENTS */
 
-const monthlyEventsObj = {
-  month: "November",
-  events: [
-    {
-      day: "11",
-      event: "Spelling Bee",
-    },
-    {
-      day: "15",
-      event: "Q & A Competition",
-    },
-    {
-      day: "25",
-      event: "Feedback",
-    },
-  ],
-};
+fetch("https://sheet.best/api/sheets/fef22b13-7c2f-4371-8b97-f867caacda6b")
+  .then((response) => response.json())
+  .then((data) => {
+    let eventsArray = [];
+
+    data.forEach((item) => {
+      console.log(item);
+      let eventItem = {
+        event: item.event,
+        date: item.time,
+      };
+      eventsArray.push(eventItem);
+    });
+    updateEvent(eventsArray);
+  });
 
 const monthDisplay = document.querySelector("tr.month td h1");
 const calendarDates = document.querySelectorAll("#calendar table td");
 const eventDisplay = document.querySelector(".event ul");
-
-monthDisplay.textContent = monthlyEventsObj.month;
-
-calendarDates.forEach((date) => {
-  date.className = "";
-  monthlyEventsObj.events.forEach((event) => {
-    if (date.innerText == event.day) {
-      date.className = "set";
-    }
-  });
-});
-
-monthlyEventsObj.events.forEach((occasion) => {
-  const li = document.createElement("li");
-  li.innerHTML = `
-                <span class="event_date">${occasion.day}</span> -
+let dayArray = [];
+const updateEvent = (monthlyEventsObj) => {
+  monthlyEventsObj.forEach((occasion) => {
+    let day = occasion.date;
+    let dayIndex = day.indexOf("/");
+    let dayLastIndex = day.lastIndexOf("/");
+    let finalDay = day.slice(dayIndex + 1, dayLastIndex);
+    dayArray.push(finalDay);
+    const li = document.createElement("li");
+    li.innerHTML = `
+                <span class="event_date">${finalDay}</span> -
                 <span class="event_info">${occasion.event}</span>
                
   `;
-  eventDisplay.appendChild(li);
-});
+    eventDisplay.appendChild(li);
+    calendarDates.forEach((date) => {
+      date.className = "";
+      dayArray.forEach((day) => {
+        if (date.innerText == day) {
+          date.className = "set";
+        }
+      });
+    });
+  });
+};
