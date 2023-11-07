@@ -88,38 +88,7 @@ img::selection {
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   z-index: 2;
   text-align: center;
-  height: 45vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   padding: 1rem;
-}
-
-.img-no-teller {
-  height: 25vh;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  gap: 0.5rem;
-  z-index: 2;
-}
-
-.img-no-teller li {
-  background: rgba(255, 255, 255, 0.7);
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.img-no-teller li.default {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-.img-no-teller li[id] {
-  transform: scale(1);
-  opacity: 0.6;
 }
 
 /* FRONT PAGE RESPONSIVE DESIGN */
@@ -397,6 +366,82 @@ nav section ul li button:hover a:any-link {
 }
 
 /* FOOTER STYLES */
+
+/* TELEGRAM OPTIONS */
+
+.telegram_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-content: center;
+}
+
+.telegram_bg.active {
+  z-index: 1000;
+  opacity: 1;
+}
+
+.telegram_options {
+  background: var(--FONT-COLOR);
+  width: 310px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+
+.telegram_options h1 {
+  padding: 1rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+}
+
+.telegram_options figure {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 1rem;
+}
+
+.telegram_options figure:last-child {
+  margin: 0;
+}
+
+.telegram_options figure div {
+  flex-basis: calc(100% / 4.5);
+  display: grid;
+  place-content: center;
+}
+
+.telegram_options figure img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid;
+  flex-grow: 1;
+}
+
+.telegram_options figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.telegram_options figure figcaption ul li:last-child {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.5);
+}
 
 footer {
   background-color: var(--BG-COLOR);

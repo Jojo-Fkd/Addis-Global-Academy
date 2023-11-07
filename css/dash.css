@@ -1,5 +1,9 @@
 /*NAVIGIATION*/
 
+.title-background {
+  height: 20vh;
+}
+
 nav {
   background: var(--BG-COLOR);
   width: 80px;

@@ -1,3 +1,15 @@
+/* FOOTER TELEGRAM OPTIONS */
+
+const telegram = document.querySelector(".telegram_link");
+const telegramBg = document.querySelector(".telegram_bg");
+telegram.onclick = () => {
+  telegramBg.classList.add("active");
+  const closeBtn = telegramBg.querySelector("h1 svg");
+  closeBtn.onclick = () => {
+    telegramBg.classList.remove("active");
+  };
+};
+
 /* FOOTER CARET FUNCTION */
 
 const caretIcons = document.querySelectorAll("footer .caret_down_container");
