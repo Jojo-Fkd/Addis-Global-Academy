@@ -384,6 +384,7 @@ nav section ul li button:hover a:any-link {
   gap: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .event_calendar_display table tr.month td {
   height: 40px;
   width: 100%;

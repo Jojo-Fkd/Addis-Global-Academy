@@ -83,6 +83,7 @@
         <div class="styler"></div>
       </article>
       <iframe
+        id="AboutVideo"
         src="https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FAddisGlobalAcademy%2Fvideos%2F427077149441813%2F&show_text=false&width=560&t=0"
         width="780"
         height="537"
@@ -92,6 +93,27 @@
         allowfullscreen="true"
       ></iframe>
     </section>
+
+    <script>
+      let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1.0,
+      };
+      let callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.target.id === "aboutVideo") {
+            if (entry.isIntersection) {
+              entry.target.play();
+            } else {
+              entry.target.pause();
+            }
+          }
+        });
+      };
+      let observer = new IntersectionObserver(callback, options);
+      observer.observe(document.querySelector("#aboutVideo"));
+    </script>
 
     <section id="main_founders">
       <div class="title-background">
