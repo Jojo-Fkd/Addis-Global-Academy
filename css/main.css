@@ -289,6 +289,11 @@ nav section ul li button:hover a:any-link {
     background: white;
     position: relative;
     z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .side_bar_container.active .side_bar_icon {
+    background: transparent;
   }
 
   .side_bar_icon::before,
@@ -297,17 +302,29 @@ nav section ul li button:hover a:any-link {
     content: "";
     height: inherit;
     width: 100%;
-    background: inherit;
+    background: white;
   }
 
   .side_bar_icon::before {
     top: -10px;
     left: 0;
+    transition: all 0.3s ease;
   }
 
   .side_bar_icon::after {
     bottom: -10px;
     left: 0;
+    transition: all 0.3s ease;
+  }
+
+  .side_bar_container.active .side_bar_icon::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .side_bar_container.active .side_bar_icon::after {
+    bottom: 0;
+    transform: rotate(45deg);
   }
 
   li.first {
@@ -335,7 +352,7 @@ nav section ul li button:hover a:any-link {
     transition: all 0.3s ease;
   }
 
-  .side_bar_container ul.active {
+  .side_bar_container.active ul {
     transform: translateX(0%);
   }
 
@@ -509,16 +526,13 @@ nav section ul li button:hover a:any-link {
 }
 
 .telegram_options figure div {
-  flex-basis: calc(100% / 4.5);
+  flex-basis: calc(100% / 3.5);
   display: grid;
   place-content: center;
 }
 
 .telegram_options figure img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 1px solid;
+  width: 60px;
   flex-grow: 1;
 }
 

@@ -82,38 +82,12 @@
         <h1>Video</h1>
         <div class="styler"></div>
       </article>
-      <iframe
-        id="AboutVideo"
-        src="https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2FAddisGlobalAcademy%2Fvideos%2F427077149441813%2F&show_text=false&width=560&t=0"
-        width="780"
-        height="537"
-        style="border: none; overflow: hidden"
-        scrolling="no"
-        frameborder="0"
-        allowfullscreen="true"
-      ></iframe>
+      <video
+        id="aboutVideo"
+        src="Images/school-about-video.mp4"
+        controls
+      ></video>
     </section>
-
-    <script>
-      let options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 1.0,
-      };
-      let callback = (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.target.id === "aboutVideo") {
-            if (entry.isIntersection) {
-              entry.target.play();
-            } else {
-              entry.target.pause();
-            }
-          }
-        });
-      };
-      let observer = new IntersectionObserver(callback, options);
-      observer.observe(document.querySelector("#aboutVideo"));
-    </script>
 
     <section id="main_founders">
       <div class="title-background">
@@ -306,7 +280,7 @@
     <!-- FOOTER -->
 
     <footer>
-      <p>Addis Global Academy</p>
+      <p>Aiming For Excellence</p>
       <section id="contact_info">
         <article>
           <h1>
@@ -443,7 +417,7 @@
         </h1>
         <section>
           <figure>
-            <div><img src="" alt="" /></div>
+            <div><img src="icons/school-logo.jpg" alt="" /></div>
             <figcaption>
               <ul>
                 <li>Grade 1</li>
@@ -463,10 +437,10 @@
             </figcaption>
           </figure>
           <figure>
-            <div><img src="" alt="" /></div>
+            <div><img src="icons/school-logo.jpg" alt="" /></div>
             <figcaption>
               <ul>
-                <li>Grade 1</li>
+                <li>Grade 2</li>
                 <li>500 subscribers</li>
               </ul>
               <svg
@@ -483,10 +457,10 @@
             </figcaption>
           </figure>
           <figure>
-            <div><img src="" alt="" /></div>
+            <div><img src="icons/school-logo.jpg" alt="" /></div>
             <figcaption>
               <ul>
-                <li>Grade 1</li>
+                <li>Grade 3</li>
                 <li>500 subscribers</li>
               </ul>
               <svg
@@ -503,10 +477,10 @@
             </figcaption>
           </figure>
           <figure>
-            <div><img src="" alt="" /></div>
+            <div><img src="icons/school-logo.jpg" alt="" /></div>
             <figcaption>
               <ul>
-                <li>Grade 1</li>
+                <li>Grade 4</li>
                 <li>500 subscribers</li>
               </ul>
               <svg
@@ -523,10 +497,10 @@
             </figcaption>
           </figure>
           <figure>
-            <div><img src="" alt="" /></div>
+            <div><img src="icons/school-logo.jpg" alt="" /></div>
             <figcaption>
               <ul>
-                <li>Grade 1</li>
+                <li>Grade 5</li>
                 <li>500 subscribers</li>
               </ul>
               <svg
@@ -545,6 +519,7 @@
         </section>
       </section>
     </div>
+
     <script>
       window.addEventListener("scroll", () => {
         const nav = document.querySelector("nav");

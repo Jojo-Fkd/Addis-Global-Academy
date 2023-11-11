@@ -68,6 +68,7 @@ nav ul li p {
   width: 30px;
   background: var(--FONT-COLOR);
   position: relative;
+  transition: all 0.4s ease;
 }
 
 .expand_icon::before,
@@ -76,8 +77,9 @@ nav ul li p {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: inherit;
+  background: white;
   left: 0;
+  transition: all 0.4s ease;
 }
 
 .expand_icon::before {
@@ -86,6 +88,20 @@ nav ul li p {
 
 .expand_icon::after {
   bottom: -10px;
+}
+
+nav.active .expand_icon {
+  background: transparent;
+}
+
+nav.active .expand_icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+nav.active .expand_icon::after {
+  bottom: 0;
+  transform: rotate(-45deg);
 }
 
 .about_icon {

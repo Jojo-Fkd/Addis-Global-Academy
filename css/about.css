@@ -11,12 +11,20 @@
   place-content: center;
 }
 
-#video figure {
-  position: relative;
+#video video {
+  width: 60vw;
 }
 
-#video figure img {
-  width: 800px;
+@media screen and (max-width: 780px) {
+  #video video {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  #video video {
+    width: 90vw;
+  }
 }
 
 /* MAIN FOUNDERS SECTION */

@@ -39,7 +39,7 @@ faqIcons.forEach((icon) => {
 /* SIDE BAR ACTIVATION */
 
 const sideBarIcon = document.querySelector(".side_bar_icon_container");
-const sideBar = document.querySelector(".side_bar_container ul");
+const sideBar = document.querySelector(".side_bar_container");
 const sideBarBlur = document.querySelector(".side_bar_blur");
 
 sideBarIcon.onclick = () => {
