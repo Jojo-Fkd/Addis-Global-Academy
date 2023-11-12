@@ -648,11 +648,12 @@ footer p {
   cursor: pointer;
 }
 
-#contact_info article address {
+#contact_info article address a:any-link {
   font-weight: lighter;
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  color: var(--FONT-COLOR);
 }
 
 #sub_footer {
