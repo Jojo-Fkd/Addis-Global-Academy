@@ -1,22 +1,31 @@
+const newsContent = document.querySelector(".news_content .article_container");
+const subNewsContent = document.querySelector(
+  ".sub_news_content .article_container"
+);
+
 fetch("https://sheet.best/api/sheets/c6d365e1-7d7e-4977-bf99-a842bea5e02c")
   .then((response) => response.json())
   .then((data) => {
-    let newsArray = [];
-    data.forEach((item) => {
-      let newsItem = {
-        image: item.Image,
-        title: item.Title,
-        news: item.News,
-        date: item.Date,
-        phoneNumber: item.Phone,
-      };
-      newsArray.push(newsItem);
-    });
-    createNewsArticles(newsArray);
+    setTimeout(() => {
+      newsContent.innerHTML = "";
+      subNewsContent.innerHTML = "";
+      let newsArray = [];
+      data.forEach((item) => {
+        let newsItem = {
+          image: item.Image,
+          title: item.Title,
+          news: item.News,
+          date: item.Date,
+          phoneNumber: item.Phone,
+        };
+        newsArray.push(newsItem);
+      });
+      createNewsArticles(newsArray.reverse());
+    }, 3000);
   });
 
 const createNewsArticles = (newsArray) => {
-  for (let i = 0; i <= newsArray.length - 1; i++) {
+  for (let i = 0; i <= 3; i++) {
     let newsPost = newsArray[i];
     const article = document.createElement("article");
     article.innerHTML = `
@@ -65,7 +74,7 @@ const createNewsArticles = (newsArray) => {
             </figcaption>
           </figure>
   `;
-    if (i === newsArray.length - 1) {
+    if (i === 0) {
       document
         .querySelector(".news_content .article_container")
         .appendChild(article);
@@ -89,7 +98,6 @@ fetch("https://sheet.best/api/sheets/fef22b13-7c2f-4371-8b97-f867caacda6b")
     let eventsArray = [];
 
     data.forEach((item) => {
-      console.log(item);
       let eventItem = {
         event: item.event,
         date: item.time,
