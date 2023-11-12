@@ -4,37 +4,18 @@
   height: 20vh;
 }
 
-#video {
-  max-width: 100vw;
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
+.title-background .styler {
+  width: 30px;
 }
 
-#video video {
-  width: 60vw;
-}
+/* SCHOOL STAFF SECTION */
 
-@media screen and (max-width: 780px) {
-  #video video {
-    width: 80vw;
-  }
-}
-
-@media screen and (max-width: 740px) {
-  #video video {
-    width: 90vw;
-  }
-}
-
-/* MAIN FOUNDERS SECTION */
-
-#main_founders {
+#staff {
   max-width: 100vw;
   min-height: 100vh;
 }
 
-#main_founders section {
+#staff section {
   width: 100%;
   display: flex;
   gap: 2rem;
@@ -44,13 +25,13 @@
   flex-wrap: wrap;
 }
 
-#main_founders figure {
+#staff figure {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#main_founders figure div {
+#staff figure div {
   display: grid;
   place-content: center;
   height: 230px;
@@ -60,17 +41,17 @@
   margin-bottom: 1rem;
 }
 
-#main_founders figure img {
+#staff figure img {
   width: 230px;
   aspect-ratio: 1 / 1;
   transition: all 0.3s ease;
 }
 
-#main_founders figure div:hover img {
+#staff figure div:hover img {
   transform: scale(1.1);
 }
 
-#main_founders figure figcaption {
+#staff figure figcaption {
   background: #eee;
   padding-top: 2rem;
   height: 250px;
@@ -78,7 +59,7 @@
   line-height: 1.8;
 }
 
-#main_founders figure figcaption p {
+#staff figure figcaption p {
   font-size: 1.3rem;
 }
 
@@ -135,6 +116,91 @@
   width: 20px;
 }
 
+/* OPTION SECTION STYLES */
+
+#option {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+#option video {
+  width: 70vw;
+}
+
+#option div {
+  height: 35vh;
+  width: 40vw;
+  padding: 0 2rem;
+  background: var(--BG-COLOR);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#option div h3 {
+  font-size: 2.1rem;
+  font-weight: normal;
+  color: var(--FONT-COLOR);
+}
+
+#option div ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+#option div ul li {
+  border: 1px solid;
+  background: var(--FONT-COLOR);
+  height: 45px;
+  width: 160px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border: 1px solid white;
+  position: relative;
+}
+
+#option div ul li a:any-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  color: var(--BG-COLOR);
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+#option div ul li:hover {
+  background: var(--BG-COLOR);
+}
+
+#option div ul li:hover a:any-link {
+  color: var(--FONT-COLOR);
+}
+
+@media screen and (max-width: 990px) {
+  /* OPTION SECTION STYLES */
+
+  #option div {
+    width: 500px;
+  }
+
+  #option div h3 {
+    font-size: 2rem;
+  }
+
+  #option div ul li a:any-link {
+    font-size: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 865px) {
   /* VIDEO SECTION */
 
@@ -144,12 +210,12 @@
 }
 
 @media screen and (max-width: 790px) {
-  #main_founders figure figcaption {
+  #staff figure figcaption {
     height: 230px;
     width: 310px;
   }
 
-  #main_founders figure figcaption p {
+  #staff figure figcaption p {
     font-size: 1.1rem;
   }
 }
@@ -163,5 +229,44 @@
 @media screen and (max-width: 620px) {
   #video figure img {
     width: 90vw;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  #option div {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  #option div {
+    width: 350px;
+  }
+
+  #option div h3 {
+    font-size: 1.6rem;
+  }
+
+  #option div ul li {
+    width: 120px;
+  }
+
+  #option div ul li a:any-link {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  #option div {
+    width: 320px;
+  }
+
+  #option div ul {
+    width: 120%;
+  }
+
+  #option div ul li {
+    width: 120px;
+    height: 42px;
   }
 }

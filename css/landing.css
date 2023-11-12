@@ -5,7 +5,7 @@
 /* SCHOOL DIVISIONS STYLING */
 
 #school-divisions {
-  min-height: 100vh;
+  min-height: 80vh;
   max-width: 100vw;
 }
 
@@ -18,8 +18,8 @@
 }
 
 #school-divisions figure {
-  width: 23vw;
-  aspect-ratio: 3 / 4;
+  width: 30vw;
+  aspect-ratio: 4 / 3;
   position: relative;
 }
 
@@ -37,7 +37,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   z-index: -1;
   opacity: 0;
   transition: all 0.3s ease;
@@ -87,99 +87,30 @@
 
 #school-divisions figure a:any-link #school-divisions figure:hover .bg,
 #school-divisions figure:hover a:any-link,
-#school-divisions figure:hover figcaption {
+#school-divisions figure:hover figcaption,
+#school-divisions figure:hover .bg {
   opacity: 1;
 }
 
-/* OPTION SECTION STYLES */
+/* QUOTE SECTION */
 
-#option {
-  display: grid;
-  place-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  border-left: none;
-  border-right: none;
-  padding: 2rem;
-}
-
-#option div {
-  height: 35vh;
-  width: 40vw;
-  padding: 0 2rem;
-  background: var(--BG-COLOR);
+.quote {
+  height: 20vh;
   display: flex;
+  gap: 2rem;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
 
-#option div h3 {
-  font-size: 2.1rem;
-  font-weight: normal;
-  color: var(--FONT-COLOR);
-}
-
-#option div ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-#option div ul li {
-  border: 1px solid;
-  background: var(--FONT-COLOR);
-  height: 45px;
-  width: 160px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  border: 1px solid white;
-  position: relative;
-}
-
-#option div ul li a:any-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-content: center;
-  color: var(--BG-COLOR);
+.quote q {
   font-size: 1.3rem;
-  transition: all 0.3s ease;
 }
 
-#option div ul li:hover {
-  background: var(--BG-COLOR);
-}
-
-#option div ul li:hover a:any-link {
-  color: var(--FONT-COLOR);
+.quote p {
+  color: var(--BG-COLOR);
 }
 
 /* LANDING PAGE RESPONSIVE DESIGN */
-
-@media screen and (max-width: 990px) {
-  /* SCHOOL DIVISIONS STYLING */
-
-  #school-divisions figure {
-    width: 30vw;
-  }
-
-  /* OPTION SECTION STYLES */
-
-  #option div {
-    width: 500px;
-  }
-
-  #option div h3 {
-    font-size: 2rem;
-  }
-
-  #option div ul li a:any-link {
-    font-size: 1.2rem;
-  }
-}
 
 @media screen and (max-width: 868px) {
   #school-divisions figure {
@@ -190,45 +121,6 @@
 @media screen and (max-width: 545px) {
   #school-divisions figure {
     width: 300px;
-  }
-}
-
-@media screen and (max-width: 512px) {
-  #option div {
-    width: 420px;
-  }
-}
-
-@media screen and (max-width: 435px) {
-  #option div {
-    width: 350px;
-  }
-
-  #option div h3 {
-    font-size: 1.6rem;
-  }
-
-  #option div ul li {
-    width: 120px;
-  }
-
-  #option div ul li a:any-link {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 362px) {
-  #option div {
-    width: 320px;
-  }
-
-  #option div ul {
-    width: 120%;
-  }
-
-  #option div ul li {
-    width: 120px;
-    height: 42px;
   }
 }
 

@@ -43,13 +43,20 @@ img::selection {
 
 #front_page {
   display: flex;
-  gap: 3rem;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 100vh;
-  padding-bottom: 1rem;
   max-width: 100vw;
+}
+
+.front_page {
+  height: 60vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 3rem;
 }
 
 #front_page .slider,
@@ -59,7 +66,6 @@ img::selection {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
   object-fit: cover;
   transition: all 0.3s ease;
 }
@@ -68,27 +74,33 @@ img::selection {
   opacity: 0;
 }
 
-#front_page img.active {
-  animation: imageAppear 0.6s ease;
-}
-
-@keyframes imageAppear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 #front_page h1 {
   color: var(--FONT-COLOR);
   font-size: 3.8rem;
   font-weight: normal;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-  z-index: 2;
   text-align: center;
   padding: 1rem;
+  z-index: 10;
+}
+
+.tracker {
+  display: flex;
+  gap: 0.5rem;
+  z-index: 1;
+}
+
+.tracker li {
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.tracker li.active {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* FRONT PAGE RESPONSIVE DESIGN */
@@ -147,7 +159,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   transition: all 0.3s ease;
 }
 
@@ -483,11 +495,11 @@ nav section ul li button:hover a:any-link {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: 0;
   transition: all 0.3s ease;
   backdrop-filter: blur(3px);
   display: grid;
   place-content: center;
+  opacity: 0;
 }
 
 .telegram_bg.active {
@@ -498,9 +510,11 @@ nav section ul li button:hover a:any-link {
 .telegram_options {
   background: var(--FONT-COLOR);
   width: 310px;
+  height: 500px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
   padding: 0 1rem;
+  overflow-y: auto;
 }
 
 .telegram_options h1 {
@@ -514,6 +528,7 @@ nav section ul li button:hover a:any-link {
 
 .telegram_options figure {
   display: flex;
+  align-items: center;
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 1rem;
@@ -532,7 +547,7 @@ nav section ul li button:hover a:any-link {
 }
 
 .telegram_options figure img {
-  width: 60px;
+  width: 40px;
   flex-grow: 1;
 }
 
@@ -570,7 +585,7 @@ footer p {
   width: 30vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #contact_info article h1 {
@@ -580,17 +595,35 @@ footer p {
   display: flex;
   align-items: center;
   gap: 0.6rem;
+  position: relative;
+}
+
+#contact_info article h1::before {
+  position: absolute;
+  content: "";
+  height: 1.5px;
+  width: 30px;
+  background: var(--FONT-COLOR);
+  bottom: -5px;
+  left: 0;
 }
 
 #contact_info article h1 .caret_down_container {
   display: none;
+  cursor: pointer;
 }
 
-#contact_info article figure {
+#contact_info article figure,
+#contact_info article figure a:any-link {
   display: flex;
   gap: 0.5rem;
   align-items: center;
   margin-bottom: 1rem;
+  color: var(--FONT-COLOR);
+}
+
+#contact_info article figure a:any-link {
+  margin-bottom: 0;
 }
 
 .icon_container {
@@ -608,7 +641,14 @@ footer p {
   font-size: 1.1rem;
 }
 
-#contact_info article:last-child address {
+.facebook_link,
+.telegram_link,
+.address_link,
+.instagram_link {
+  cursor: pointer;
+}
+
+#contact_info article address {
   font-weight: lighter;
   display: flex;
   gap: 0.5rem;
@@ -652,51 +692,7 @@ footer p {
 
 /* FOOTER RESPONSIVE DESIGN */
 
-@media screen and (max-width: 895px) {
-  /* FOOTER STYLES */
-
-  footer p {
-    font-size: 1.8rem;
-  }
-
-  #contact_info article h1 {
-    font-size: 1.3rem;
-  }
-
-  .icon_container img {
-    width: 28px !important;
-  }
-
-  #contact_info article figure figcaption {
-    font-size: 1rem;
-  }
-
-  #sub_footer article {
-    font-size: 0.8rem;
-  }
-
-  #sub_footer ul {
-    gap: 0.9rem;
-  }
-
-  #sub_footer ul li {
-    padding-right: 0.9rem;
-  }
-
-  #sub_footer ul li a:any-link {
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 812px) {
-  #sub_footer {
-    flex-flow: column-reverse;
-    gap: 1.6rem;
-    padding-bottom: 1.6rem;
-  }
-}
-
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 990px) {
   #contact_info {
     flex-direction: column;
   }
@@ -750,6 +746,50 @@ footer p {
 
   .caret:last-child {
     transform: rotate(40deg);
+  }
+}
+
+@media screen and (max-width: 895px) {
+  /* FOOTER STYLES */
+
+  footer p {
+    font-size: 1.8rem;
+  }
+
+  #contact_info article h1 {
+    font-size: 1.3rem;
+  }
+
+  .icon_container img {
+    width: 28px !important;
+  }
+
+  #contact_info article figure figcaption {
+    font-size: 1rem;
+  }
+
+  #sub_footer article {
+    font-size: 0.8rem;
+  }
+
+  #sub_footer ul {
+    gap: 0.9rem;
+  }
+
+  #sub_footer ul li {
+    padding-right: 0.9rem;
+  }
+
+  #sub_footer ul li a:any-link {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  #sub_footer {
+    flex-flow: column-reverse;
+    gap: 1.6rem;
+    padding-bottom: 1.6rem;
   }
 }
 

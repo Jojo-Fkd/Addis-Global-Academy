@@ -2,7 +2,8 @@
 
 const slider = document.querySelector(".slider");
 const sliderImages = slider.querySelectorAll("img");
-
+const tracker = document.querySelector(".tracker");
+const track = tracker.querySelectorAll("li");
 let id = 0;
 
 let idLengthNo = 0;
@@ -28,6 +29,12 @@ setInterval(() => {
       if (img.id == id) {
         img.style.opacity = "1";
       }
+    }
+  });
+  track.forEach((track) => {
+    track.className = "";
+    if (track.id == id) {
+      track.className = "active";
     }
   });
 }, 5000);
