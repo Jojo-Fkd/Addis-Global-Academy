@@ -89,7 +89,7 @@ const createNewsArticles = (newsArray) => {
         .querySelector(".news_content .article_container")
         .appendChild(article);
       let latestTag = document.createElement("div");
-      let h3 = document.querySelector("h3");
+      let h3 = article.querySelector("h3");
       latestTag.innerText = "Latest";
       h3.appendChild(latestTag);
     } else {
@@ -98,50 +98,4 @@ const createNewsArticles = (newsArray) => {
         .appendChild(article);
     }
   }
-};
-
-/* EVENTS */
-
-fetch("https://sheet.best/api/sheets/fef22b13-7c2f-4371-8b97-f867caacda6b")
-  .then((response) => response.json())
-  .then((data) => {
-    let eventsArray = [];
-
-    data.forEach((item) => {
-      let eventItem = {
-        event: item.event,
-        date: item.time,
-      };
-      eventsArray.push(eventItem);
-    });
-    updateEvent(eventsArray);
-  });
-
-const monthDisplay = document.querySelector("tr.month td h1");
-const calendarDates = document.querySelectorAll("#calendar table td");
-const eventDisplay = document.querySelector(".event ul");
-let dayArray = [];
-const updateEvent = (monthlyEventsObj) => {
-  monthlyEventsObj.forEach((occasion) => {
-    let day = occasion.date;
-    let dayIndex = day.indexOf("/");
-    let dayLastIndex = day.lastIndexOf("/");
-    let finalDay = day.slice(dayIndex + 1, dayLastIndex);
-    dayArray.push(finalDay);
-    const li = document.createElement("li");
-    li.innerHTML = `
-                <span class="event_date">${finalDay}</span> -
-                <span class="event_info">${occasion.event}</span>
-               
-  `;
-    eventDisplay.appendChild(li);
-    calendarDates.forEach((date) => {
-      date.className = "";
-      dayArray.forEach((day) => {
-        if (date.innerText == day) {
-          date.className = "set";
-        }
-      });
-    });
-  });
 };
