@@ -143,21 +143,21 @@
 div.main_news {
   background: rgba(255, 255, 255, 0.2);
   height: 50px;
-  width: 400px;
+  width: 300px;
   border-radius: 5px;
 }
 
 .call div,
 .date div {
   height: 40px;
-  width: 300px;
+  width: 283px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 }
 
 .news_post .image_load {
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 }
@@ -175,7 +175,7 @@ div.main_news {
 
 .sub_news_content .call div,
 .sub_news_content .date div {
-  width: 235px;
+  width: 234px;
 }
 
 /* NEWS SECTION RESPONSIVE DESIGN */
@@ -269,65 +269,58 @@ div.main_news {
   }
 }
 
-/* UPCOMING EVENT */
+/* FAILED TO FETCH DATA FOR NEWS POPUP STYLES */
 
-#events {
-  min-height: 100vh;
+.popup_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  margin-bottom: 2rem;
+  z-index: -1;
+  backdrop-filter: blur(3px);
+  display: grid;
+  place-content: center;
 }
 
-#calendar {
+.popup_container.active {
+  opacity: 1;
+  z-index: 100;
+}
+
+.failed_popup {
+  background: var(--FONT-COLOR);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-left: 1rem;
+  flex-direction: column;
+  height: 200px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  z-index: -1;
 }
 
-@media screen and (max-width: 750px) {
-  #calendar table tr {
-    gap: 0.4rem;
-    margin-bottom: 0.4rem;
-  }
-
-  #calendar table tr:not(.month) td {
-    font-size: 1.1rem;
-    height: 40px;
-    width: 40px;
-  }
+.failed_popup.active {
+  opacity: 1;
+  z-index: 1000;
 }
 
-@media screen and (max-width: 670px) {
-  #calendar {
-    margin-left: 0;
-  }
-
-  .event_calendar_display {
-    flex-flow: column-reverse;
-  }
-
-  .event {
-    width: 100%;
-    margin-right: none;
-  }
+.failed_popup h3 {
+  font-weight: 400;
+  font-size: 1.3rem;
 }
 
-@media screen and (max-width: 370px) {
-  #calendar table {
-    padding: 0.5rem;
-  }
+.failed_popup span {
+  font-size: 0.95rem;
+}
 
-  #calendar table tr {
-    gap: 0.3rem;
-    margin-bottom: 0.3rem;
-  }
-
-  #calendar table tr.month td {
-    font-size: 1rem;
-  }
-
-  #calendar table tr:not(.month) td {
-    height: 40px;
-    width: 40px;
-  }
+.failed_popup button {
+  height: 35px;
+  width: 130px;
+  background: var(--BG-COLOR);
+  color: var(--FONT-COLOR);
+  border: none;
+  outline: none;
+  outline-color: none;
 }

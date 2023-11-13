@@ -3,6 +3,8 @@ const subNewsContent = document.querySelector(
   ".sub_news_content .article_container"
 );
 
+const popupContainer = document.querySelector(".popup_container");
+
 fetch("https://sheet.best/api/sheets/c6d365e1-7d7e-4977-bf99-a842bea5e02c")
   .then((response) => response.json())
   .then((data) => {
@@ -22,6 +24,14 @@ fetch("https://sheet.best/api/sheets/c6d365e1-7d7e-4977-bf99-a842bea5e02c")
       });
       createNewsArticles(newsArray.reverse());
     }, 3000);
+  })
+  .catch(() => {
+    popupContainer.classList.add("active");
+    const failedPopup = popupContainer.querySelector(".failed_popup");
+    failedPopup.classList.add("active");
+    failedPopup.querySelector("button").onclick = () => {
+      location.reload();
+    };
   });
 
 const createNewsArticles = (newsArray) => {

@@ -152,7 +152,8 @@ img::selection {
 
 nav {
   width: 100vw;
-  padding: 0.3rem 0;
+  padding: 0.3rem 2rem;
+  padding-right: 3rem;
   background: var(--BG-COLOR);
   color: var(--FONT-COLOR);
   display: flex;
@@ -163,22 +164,19 @@ nav {
   transition: all 0.3s ease;
 }
 
-nav h1 {
-  padding: 0 2rem;
-}
-
 nav h1 img {
   width: 70px;
   transition: all 0.3s ease;
 }
 
 nav.scroll {
-  padding: 0.2rem 0;
+  padding: 0.2rem 2rem;
+  padding-right: 3rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 nav.scroll h1 img {
-  width: 60px;
+  width: 65px;
 }
 
 nav section ul {
@@ -186,7 +184,6 @@ nav section ul {
   gap: 3rem;
   justify-content: center;
   align-items: center;
-  width: 60vw;
 }
 
 nav section ul li a:any-link {
@@ -257,10 +254,6 @@ nav section ul li button:hover a:any-link {
 /* NAVIGATION SECTION RESPONSIVE DESIGN */
 
 @media screen and (max-width: 990px) {
-  nav section ul {
-    width: 70vw;
-  }
-
   nav section ul li a:any-link {
     font-size: 1rem;
   }
@@ -270,16 +263,12 @@ nav section ul li button:hover a:any-link {
   }
 }
 
-@media screen and (max-width: 842px) {
-  nav section ul {
-    width: 80vw;
-    gap: 2.5rem;
-  }
-}
-
 @media screen and (max-width: 630px) {
+  nav {
+    padding-right: 1rem;
+  }
+
   nav section ul {
-    width: 190px;
     flex-flow: row-reverse;
     gap: 1rem;
   }
@@ -379,7 +368,7 @@ nav section ul li button:hover a:any-link {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vw;
+    height: 100vh;
     width: 100%;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -791,12 +780,6 @@ footer p {
     flex-flow: column-reverse;
     gap: 1.6rem;
     padding-bottom: 1.6rem;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  nav h1 {
-    padding: 0 1rem;
   }
 }
 

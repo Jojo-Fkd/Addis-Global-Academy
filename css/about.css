@@ -70,33 +70,32 @@
   padding-bottom: 2rem;
 }
 
-#faq_section section p {
-  padding: 1rem 2.8rem;
-}
-
-#faq_section section section {
+.faq-body section {
   overflow: hidden;
-  max-height: 90px;
+  height: 90px;
   transition: all 0.3s ease;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-#faq_section section section.active {
-  max-height: 300px;
+.faq-body section.active {
+  height: 200px;
 }
 
 #faq_section article {
   height: 90px;
   max-width: 100vw;
-  margin: 0 2rem;
-  padding: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem;
+}
+
+#faq_section p {
+  padding: 1rem;
 }
 
 #faq_section article h3 {
-  font-size: 1.7rem;
+  font-size: 1.2rem;
   font-weight: lighter;
 }
 
@@ -110,10 +109,6 @@
 
 #faq_section .answer_toggle.active {
   transform: rotate(180deg);
-}
-
-#faq_section .answer_toggle img {
-  width: 20px;
 }
 
 /* OPTION SECTION STYLES */
