@@ -703,11 +703,11 @@ footer p {
   }
 
   #contact_info article.active {
-    height: 220px;
+    height: 270px;
   }
 
   #contact_info article:has(address).active {
-    height: 150px;
+    height: 200px;
   }
 
   #contact_info article h1 .caret_down_container {
