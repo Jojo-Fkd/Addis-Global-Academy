@@ -1,4 +1,4 @@
-const newsContent = document.querySelector(".news_content .article_container");
+/* const newsContent = document.querySelector(".news_content .article_container");
 const subNewsContent = document.querySelector(
   ".sub_news_content .article_container"
 );
@@ -99,3 +99,4 @@ const createNewsArticles = (newsArray) => {
     }
   }
 };
+ */
